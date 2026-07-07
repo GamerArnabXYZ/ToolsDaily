@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Tools — Free Online Tools for Students, Teachers & Developers</title>
+  <meta name="description" content="A blazing-fast collection of free everyday tools: JSON formatter, word counter, unit converter, password generator, lesson timers and more. No sign-up, no ads clutter — just instant tools." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://toolsdaily.netlify.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Daily Tools — Free Online Tools" />
+  <meta property="og:description" content="Instant, lightweight tools for students, teachers and developers." />
+  <meta property="og:url" content="https://toolsdaily.netlify.app/" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Fonts, design system, Tailwind v4 CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- ── Header ── -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Daily Tools home">
+        <span class="brand__mark" aria-hidden="true">D</span>
+        <span>Daily<span class="brand__sub">Tools</span></span>
+      </a>
+
+      <div class="search" role="search">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <label class="sr-only" for="site-search">Search tools</label>
+        <input id="site-search" type="search" placeholder="Search tools…" autocomplete="off" aria-label="Search tools" />
+      </div>
+
+      <a class="btn btn--primary" href="#tools" style="height:36px;padding:0 16px;font-size:14px;">Browse all</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ── Hero band (mesh gradient) ── -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__mesh" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="eyebrow">Free · No sign-up · Instant</p>
+        <h1 id="hero-title" class="display-xl">Everyday tools, ready in a click.</h1>
+        <p class="body-lg">A small, fast collection of utilities for students, teachers and developers. No tracking, no clutter — just the tool you need, when you need it.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#tools">Start now</a>
+          <a class="btn btn--secondary" href="#featured">See featured</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Top AdSense slot ── -->
+    <div class="container">
+      <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+    </div>
+
+    <!-- ── Featured ── -->
+    <section class="section section--soft" id="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Featured</p>
+          <h2 id="featured-title" class="display-lg">Most-used tools today.</h2>
+          <p>Reach for these first — they cover the daily grind for most visitors.</p>
+        </div>
+
+        <div class="card-grid">
+          <a class="card" href="tools/word-counter.html">
+            <span class="card__icon mono" aria-hidden="true">W</span>
+            <span class="card__title">Word Counter</span>
+            <p class="card__desc">Count words, characters, sentences and reading time.</p>
+            <span class="card__meta">students / tool</span>
+          </a>
+          <a class="card" href="tools/json-formatter.html">
+            <span class="card__icon mono" aria-hidden="true">{}</span>
+            <span class="card__title">JSON Formatter</span>
+            <p class="card__desc">Pretty-print, validate and minify JSON instantly.</p>
+            <span class="card__meta">developers / tool</span>
+          </a>
+          <a class="card" href="tools/password.html">
+            <span class="card__icon mono" aria-hidden="true">🔑</span>
+            <span class="card__title">Password Generator</span>
+            <p class="card__desc">Strong, copy-ready random passwords in a tap.</p>
+            <span class="card__meta">everyday / tool</span>
+          </a>
+          <a class="card" href="tools/unit.html">
+            <span class="card__icon mono" aria-hidden="true">⇄</span>
+            <span class="card__title">Unit Converter</span>
+            <p class="card__desc">Length, mass, temperature and more, converted live.</p>
+            <span class="card__meta">students / tool</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── All tools (filterable) ── -->
+    <section class="section" id="tools" aria-labelledby="tools-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">All tools</p>
+          <h2 id="tools-title" class="display-lg">Browse the full toolkit.</h2>
+          <p>Filter by who you are, or just type what you need.</p>
+        </div>
+
+        <div class="filter-row" id="filter-row" role="group" aria-label="Filter by category"></div>
+
+        <div class="card-grid" id="tools-grid"></div>
+        <p class="no-results">No tools match your search. Try a different word.</p>
+      </div>
+    </section>
+
+    <!-- ── Bottom AdSense slot ── -->
+    <div class="container">
+      <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="/" aria-label="Daily Tools home">
+            <span class="brand__mark" aria-hidden="true">D</span>
+            <span>Daily<span class="brand__sub">Tools</span></span>
+          </a>
+          <p style="margin-top:16px;max-width:280px;">Free, lightweight tools that load instantly — built for the daily grind.</p>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul>
+            <li><a href="tools/word-counter.html">Word Counter</a></li>
+            <li><a href="tools/json-formatter.html">JSON Formatter</a></li>
+            <li><a href="tools/unit.html">Unit Converter</a></li>
+            <li><a href="tools/password.html">Password Generator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#tools">Students</a></li>
+            <li><a href="#tools">Teachers</a></li>
+            <li><a href="#tools">Developers</a></li>
+            <li><a href="#tools">Everyday</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>About</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#featured">Featured</a></li>
+            <li><a href="/#tools">All tools</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span id="year"></span> Daily Tools. Built vanilla — no frameworks.</span>
+        <span class="mono">toolsdaily.netlify.app</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script type="module" src="./js/main.js" defer></script>
+</body>
+</html>
