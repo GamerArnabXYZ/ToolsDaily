@@ -2,9 +2,9 @@
    Daily Tools — UI logic
    Modular, dependency-free. Loaded with `defer` so the UI paints first.
    Responsibilities:
-     - Live search across tool cards (title + description + tags)
+     - Live search across tool cards (title + description + category)
      - Category filtering via pill row (multi-narrowing with search)
-     - AdSense slot boot (auto-loads data-ad-slot when config present)
+     - Ads disabled by default; see initAds() note for re-enabling
    ===================================================================== */
 
 const TOOLS = [
@@ -107,18 +107,12 @@ function initSearch(input) {
   });
 }
 
-function initAds() {
-  const cfg = window.__ADS__;
-  if (!cfg || !cfg.client || !cfg.slot) return;
-  const slot = document.querySelector("[data-ad-slot]");
-  if (!slot) return;
-  slot.dataset.adClient = cfg.client;
-  slot.dataset.adSlot = cfg.slot;
-  const s = document.createElement("script");
-  s.async = true;
-  s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-  document.head.appendChild(s);
-}
+// ── Ads (disabled by default) ──────────────────────────────────────────────
+// To enable AdSense, add <div class="ad-slot" data-ad-slot></div> where you
+// want a unit, then set a real publisher id below. Left OFF because no
+// publisher id is configured — the site ships with zero third-party ad JS.
+// const ADS = { client: "ca-pub-XXXXXXXXXXXXXXXX", slot: "XXXXXXXXXX" };
+// function initAds(cfg) { /* inject adsbygoogle loader + slot attrs */ }
 
 function init() {
   const grid = document.getElementById("tools-grid");
@@ -128,7 +122,6 @@ function init() {
   if (filters) buildFilterRow(filters);
   if (search) initSearch(search);
   if (grid && (search || filters)) render();
-  initAds();
 }
 
 if (document.readyState === "loading") {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Daily Tools — Free Online Tools for Students, Teachers & Developers</title>
-  <meta name="description" content="A blazing-fast collection of free everyday tools: JSON formatter, word counter, unit converter, password generator, lesson timers and more. No sign-up, no ads clutter — just instant tools." />
+  <meta name="description" content="A blazing-fast collection of free everyday tools: JSON formatter, word counter, unit converter, password generator, lesson timers and more. No sign-up — just instant tools." />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/" />
 
@@ -15,11 +15,10 @@
   <meta property="og:url" content="https://toolsdaily.netlify.app/" />
   <meta name="twitter:card" content="summary" />
 
-  <!-- Fonts, design system, Tailwind v4 CDN -->
+  <!-- Fonts + design system (custom CSS; no framework runtime) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="./css/style.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
   <!-- ── Header ── -->
@@ -54,13 +53,14 @@
           <a class="btn btn--primary" href="#tools">Start now</a>
           <a class="btn btn--secondary" href="#featured">See featured</a>
         </div>
+        <div class="hero__links">
+          <a href="about-us.html">About Us</a>
+          <a href="contact-us.html">Contact Us</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+        </div>
       </div>
     </section>
-
-    <!-- ── Top AdSense slot ── -->
-    <div class="container">
-      <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
-    </div>
 
     <!-- ── Featured ── -->
     <section class="section section--soft" id="featured" aria-labelledby="featured-title">
@@ -115,11 +115,6 @@
         <p class="no-results">No tools match your search. Try a different word.</p>
       </div>
     </section>
-
-    <!-- ── Bottom AdSense slot ── -->
-    <div class="container">
-      <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
-    </div>
   </main>
 
   <!-- ── Footer ── -->
@@ -157,12 +152,16 @@
             <li><a href="/">Home</a></li>
             <li><a href="/#featured">Featured</a></li>
             <li><a href="/#tools">All tools</a></li>
+<li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
           </ul>
         </div>
       </div>
       <div class="site-footer__bottom">
         <span>© <span id="year"></span> Daily Tools. Built vanilla — no frameworks.</span>
-        <span class="mono">toolsdaily.netlify.app</span>
+        <span class="footer-legal"><a href="about-us.html">About</a> · <a href="contact-us.html">Contact</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-conditions.html">Terms</a></span>
       </div>
     </div>
   </footer>

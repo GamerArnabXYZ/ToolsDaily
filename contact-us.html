@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — Daily Tools</title>
+  <meta name="description" content="Get in touch with Daily Tools: report a bug, suggest a tool, or just say hello." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://toolsdaily.netlify.app/contact-us.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Daily Tools home">
+        <span class="brand__mark" aria-hidden="true">D</span>
+        <span>Daily<span class="brand__sub">Tools</span></span>
+      </a>
+      <div class="search" role="search">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input id="site-search" type="search" placeholder="Search tools…" autocomplete="off" aria-label="Search tools" disabled />
+      </div>
+      <a class="btn btn--primary" href="/" style="height:36px;padding:0 16px;font-size:14px;">Home</a>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <section class="section">
+      <div style="max-width:640px;margin:0 auto;">
+        <p class="eyebrow">Contact</p>
+        <h1 class="display-lg">Say hello</h1>
+        <p class="body-lg" style="margin-top:var(--s-lg);">Found a bug, want a tool, or have feedback? Send a note and I'll get back to you.</p>
+
+        <div class="contact-card" style="margin-top:var(--s-2xl);">
+          <p class="eyebrow">Behind Daily Tools</p>
+          <h2 class="display-sm">Arnab Das</h2>
+          <p style="margin-top:8px;">Solo developer behind Daily Tools — I design, build, and maintain every page.</p>
+          <ul class="contact-links" style="margin-top:var(--s-lg);">
+            <li><span class="contact-links__k">Email</span> <a href="mailto:arnabdasdas2010@gmail.com">arnabdasdas2010@gmail.com</a></li>
+            <li><span class="contact-links__k">YouTube</span> <a href="https://www.youtube.com/@GamerArnabXYZ" target="_blank" rel="noopener">@GamerArnabXYZ</a></li>
+            <li><span class="contact-links__k">YouTube</span> <a href="https://www.youtube.com/@CodeWithArnix" target="_blank" rel="noopener">@CodeWithArnix</a></li>
+          </ul>
+        </div>
+
+        <form id="contact-form" style="margin-top:var(--s-2xl);display:grid;gap:var(--s-lg);" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" class="text-input" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" class="text-input" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="text-input" rows="6" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit" style="justify-self:start;">Send message</button>
+          <p id="form-status" role="status" aria-live="polite" style="color:var(--accent);font-size:14px;"></p>
+        </form>
+
+        <p style="margin-top:var(--s-2xl);">Prefer email? Reach me directly at
+          <a id="mail-link" href="mailto:arnabdasdas2010@gmail.com">arnabdasdas2010@gmail.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="/" aria-label="Daily Tools home">
+            <span class="brand__mark" aria-hidden="true">D</span>
+            <span>Daily<span class="brand__sub">Tools</span></span>
+          </a>
+          <p style="margin-top:16px;max-width:280px;">Free, lightweight tools that load instantly — built for the daily grind.</p>
+        </div>
+        <div><h3>Tools</h3><ul><li><a href="tools/word-counter.html">Word Counter</a></li><li><a href="tools/json-formatter.html">JSON Formatter</a></li><li><a href="tools/unit.html">Unit Converter</a></li><li><a href="tools/password.html">Password Generator</a></li></ul></div>
+        <div><h3>Categories</h3><ul><li><a href="/#tools">Students</a></li><li><a href="/#tools">Teachers</a></li><li><a href="/#tools">Developers</a></li><li><a href="/#tools">Everyday</a></li></ul></div>
+        <div><h3>Company</h3><ul><li><a href="/">Home</a></li><li><a href="about-us.html">About Us</a></li><li><a href="contact-us.html">Contact</a></li><li><a href="privacy-policy.html">Privacy</a></li><li><a href="terms-conditions.html">Terms</a></li></ul></div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span class="year"></span> Daily Tools. Built vanilla — no frameworks.</span>
+        <span class="footer-legal"><a href="privacy-policy.html">Privacy</a> · <a href="terms-conditions.html">Terms</a> · <a href="about-us.html">About</a> · <a href="contact-us.html">Contact</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector(".year").textContent = new Date().getFullYear();
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+      if (!name || !email || !message) {
+        status.style.color = "var(--danger, #d33)";
+        status.textContent = "Please fill in every field.";
+        return;
+      }
+      const subject = encodeURIComponent("Daily Tools message from " + name);
+      const body = encodeURIComponent(message + "\n\n— " + name + " (" + email + ")");
+      window.location.href = "mailto:arnabdasdas2010@gmail.com?subject=" + subject + "&body=" + body;
+      status.style.color = "var(--accent)";
+      status.textContent = "Opening your email app… if nothing happens, email arnabdasdas2010@gmail.com directly.";
+    });
+  </script>
+</body>
+</html>

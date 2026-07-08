@@ -17,7 +17,13 @@
     const words = trimmed ? trimmed.split(/\s+/).length : 0;
     const chars = text.length;
     const charsNo = text.replace(/\s/g, "").length;
-    const sentences = trimmed ? (trimmed.match(/[.!?](\s|$)/g) || []).length : 0;
+    // Strip common abbreviations (Dr., e.g., etc.) before counting so they
+    // don't register as sentence boundaries.
+    const stripped = trimmed.replace(
+      /\b(?:mr|mrs|ms|dr|prof|st|sr|jr|capt|gen|col|sgt|rev|hon|no|inc|ltd|co|etc|vs|e\.g|i\.e)\./gi,
+      ""
+    );
+    const sentences = stripped ? (stripped.match(/[.!?](\s|$)/g) || []).length : 0;
     const paragraphs = trimmed ? text.split(/\n\s*\n/).filter((p) => p.trim()).length : 0;
     const minutes = words / 200;
     let reading;
