@@ -78,6 +78,31 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 img, svg { display: block; max-width: 100%; }
+
+/* ── Mobile browser fixes ─────────────────────────────────────────────── */
+/* 16px font on form controls stops iOS Safari from auto-zooming on focus,
+   so disabling page zoom (viewport) doesn't make typing uncomfortable. */
+input, textarea, select, button { font-size: 16px; }
+
+/* Respect notches/home indicators (used with viewport-fit=cover). */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Prevent accidental text selection / grey flash on tap targets. */
+a, button, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* No horizontal scroll / rubber-banding past content edges. */
+html, body { overflow-x: hidden; max-width: 100%; }
+body { overscroll-behavior-y: none; }
+
+/* Use dynamic viewport height where supported so mobile address bars
+   don't crop full-height sections. */
+:root { --vh: 100vh; }
+@supports (height: 100dvh) { :root { --vh: 100dvh; } }
 ::selection { background: var(--primary); color: #f2f2f2; }
 
 /* ── Layout helpers ── */
@@ -175,7 +200,7 @@ img, svg { display: block; max-width: 100%; }
   width: 100%;
   height: 40px;
   padding: 0 80px 0 36px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink);
   background: var(--canvas);
   border: 1px solid var(--hairline);
