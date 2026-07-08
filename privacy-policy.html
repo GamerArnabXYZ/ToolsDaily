@@ -22,7 +22,7 @@
         <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
         </svg>
-        <input id="site-search" type="search" placeholder="Search tools…" autocomplete="off" aria-label="Search tools" disabled />
+        <input id="site-search" type="search" placeholder="Search tools…" autocomplete="off" aria-label="Search tools">
       </div>
       <a class="btn btn--primary" href="/" style="height:36px;padding:0 16px;font-size:14px;">Home</a>
     </div>
@@ -84,6 +84,8 @@
     </div>
   </footer>
 
-  <script>document.querySelector(".year").textContent = new Date().getFullYear();</script>
+  <script src="js/tools-data.js" defer></script>
+  <script src="js/header-search.js" defer></script>
+<script>document.querySelector(".year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
