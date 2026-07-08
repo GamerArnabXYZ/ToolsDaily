@@ -1,39 +1,58 @@
 /* =====================================================================
-   Daily Tools — header search (all pages)
-   Enables the header search box on every page. On submit (Enter), it
-   navigates to the shared results page with the query as ?q=.
-   Every page loads js/tools-data.js before this one.
+   Daily Tools — header search behavior
+   Wires the global header search box: typing navigates to the search
+   results page, and pressing Enter/or clicking submits immediately.
+
+   The header markup differs per page type:
+     • Marketing/legal pages render the search field inside a 404-style
+       container (#hdr-search / #hdr-submit).
+     • Tool pages render it inside a <form id="search-form">.
+   initHeaderSearch() sets up whichever variant is present on the page,
+   so calling it unconditionally is safe.
    ===================================================================== */
+(function () {
+  "use strict";
+  const DT = (window.DailyTools = window.DailyTools || {});
 
-function initHeaderSearch() {
-  const input = document.getElementById("site-search");
-  if (!input) return;
+  DT.initHeaderSearch = function () {
+    const input = document.getElementById("site-search");
+    if (!input) return;
 
-  input.disabled = false;
-  input.removeAttribute("disabled");
+    const form = document.getElementById("search-form");
 
-  const submit = () => {
-    const q = input.value.trim();
-    if (!q) {
-      window.location.href = "search.html";
-      return;
+    // Form-based search (tool pages): intercept submit, no native reload.
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const q = input.value.trim();
+        if (!q) return;
+        window.location.href = "./../search.html?q=" + encodeURIComponent(q);
+      });
+      return; // form path handles submission; nothing else to wire.
     }
-    window.location.href = "search.html?q=" + encodeURIComponent(q);
+
+    // Standalone search field (marketing / legal pages).
+    const wrap = document.getElementById("hdr-search");
+    const submit = document.getElementById("hdr-submit");
+    if (!wrap && !submit) return;
+
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        const q = input.value.trim();
+        if (!q) return;
+        window.location.href = "./search.html?q=" + encodeURIComponent(q);
+      }
+    });
+    if (submit) {
+      submit.addEventListener("click", function () {
+        const q = input.value.trim();
+        if (!q) return;
+        window.location.href = "./search.html?q=" + encodeURIComponent(q);
+      });
+    }
   };
+})();
 
-  input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      submit();
-    }
-  });
-
-  const btn = input.parentElement.querySelector("[data-search-submit]");
-  if (btn) btn.addEventListener("click", submit);
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initHeaderSearch);
-} else {
-  initHeaderSearch();
-}
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.DailyTools) window.DailyTools.initHeaderSearch();
+});

@@ -10,11 +10,34 @@
     let i=0,right=0;
     function show(){
       score.textContent="";
-      if(i>=qs.length){playArea.innerHTML='<p style="font-size:20px;font-weight:600;">Done — '+right+'/'+qs.length+' correct.</p>';return;}
+      if(i>=qs.length){
+        const done=document.createElement("p");
+        done.style.cssText="font-size:20px;font-weight:600;";
+        done.textContent="Done — "+right+"/"+qs.length+" correct.";
+        playArea.innerHTML="";
+        playArea.appendChild(done);
+        return;
+      }
       const item=qs[i];const opts=[item.a,item.wrong].filter(Boolean).sort(()=>Math.random()-0.5);
-      const html='<p style="font-weight:600;">'+(i+1)+'. '+item.q+'</p>'+opts.map(o=>'<button class="opt btn-copy" type="button" style="display:block;width:100%;text-align:left;margin-top:8px;">'+o+'</button>').join("");
-      playArea.innerHTML=html;
-      playArea.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{if(b.textContent===item.a){right++;b.style.color="var(--link,#0070f3)";}else{b.style.color="var(--error,#ee0000)";}playArea.querySelectorAll(".opt").forEach(x=>x.disabled=true);i++;setTimeout(show,450);}));
+      playArea.innerHTML="";
+      const q=document.createElement("p");
+      q.style.fontWeight="600";
+      q.textContent=(i+1)+". "+item.q;
+      playArea.appendChild(q);
+      opts.forEach(o=>{
+        const b=document.createElement("button");
+        b.type="button";
+        b.className="opt btn-copy";
+        b.style.cssText="display:block;width:100%;text-align:left;margin-top:8px;";
+        b.textContent=o;
+        b.addEventListener("click",()=>{
+          if(b.textContent===item.a){right++;b.style.color="var(--link,#0070f3)";}
+          else{b.style.color="var(--error,#ee0000)";}
+          playArea.querySelectorAll(".opt").forEach(x=>x.disabled=true);
+          i++;setTimeout(show,450);
+        });
+        playArea.appendChild(b);
+      });
     }
     show();
   }

@@ -1,0 +1,6 @@
+/* Daily Tools — web fonts.
+   Loaded as a dedicated stylesheet (via <link>) instead of an @import in
+   style.css so the browser can fetch it in parallel with the rest of the
+   critical CSS rather than blocking on a chained request. */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap");

@@ -12,10 +12,23 @@
   function add(nm){
     const d=document.createElement("div");
     d.style.cssText="display:flex;gap:8px;align-items:center;";
-    d.innerHTML='<span style="flex:1;font-size:14px;">'+nm+'</span><button class="mark btn-copy" type="button" style="height:28px;">P</button><button class="del btn-copy" type="button" style="height:28px;color:var(--error,#ee0000);">✕</button>';
-    const mk=d.querySelector(".mark");
+    const nameEl=document.createElement("span");
+    nameEl.style.cssText="flex:1;font-size:14px;";
+    nameEl.textContent=nm;
+    const mk=document.createElement("button");
+    mk.type="button";
+    mk.className="mark btn-copy";
+    mk.style.height="28px";
+    mk.textContent="P";
+    const del=document.createElement("button");
+    del.type="button";
+    del.className="del btn-copy";
+    del.style.height="28px";
+    del.style.color="var(--error,#ee0000)";
+    del.textContent="✕";
+    d.append(nameEl,mk,del);
     mk.addEventListener("click",()=>{mk.textContent= mk.textContent==="P"?"A":"P";mk.style.color= mk.textContent==="P"?"var(--ink)":"var(--error,#ee0000)";render();});
-    d.querySelector(".del").addEventListener("click",()=>{d.remove();render();});
+    del.addEventListener("click",()=>{d.remove();render();});
     list.appendChild(d);render();
   }
   name.addEventListener("keydown",e=>{if(e.key==="Enter"&&name.value.trim()){add(name.value.trim());name.value="";}});

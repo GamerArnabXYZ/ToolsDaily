@@ -1,65 +1,89 @@
 /* =====================================================================
-   Daily Tools — shared tool-page utilities
-   Provides a single toast + copy-to-clipboard helper so every tool page
-   shares the same interaction vocabulary. Loaded with `defer`.
+   Daily Tools — shared client utilities
+   Exposes helpers on a single global namespace (window.DailyTools) so the
+   site's scripts don't pollute the global scope and don't risk name
+   collisions with each other or with third-party snippets.
+
+   Responsibilities:
+     - DailyTools.showToast(msg)    → transient status message
+     - DailyTools.copyText(text,btn)→ clipboard copy with fallback
+     - Delegated click handler for [data-copy] / [data-copy-text] buttons
+       used across every tool page.
    ===================================================================== */
+(function () {
+  "use strict";
 
-function showToast(msg) {
-  let el = document.getElementById("toast");
-  if (!el) {
-    el = document.createElement("div");
-    el.id = "toast";
-    el.className = "toast";
-    el.setAttribute("role", "status");
-    el.setAttribute("aria-live", "polite");
-    document.body.appendChild(el);
-  }
-  el.textContent = msg;
-  el.classList.add("is-visible");
-  clearTimeout(el._t);
-  el._t = setTimeout(() => el.classList.remove("is-visible"), 1800);
-}
+  const DT = (window.DailyTools = window.DailyTools || {});
 
-async function copyText(text) {
-  try {
-    if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(text);
+  /* ---- Lightweight toast -------------------------------------------- */
+  DT.showToast = function (message) {
+    const existing = document.querySelector(".toast");
+    if (existing) existing.remove();
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.setAttribute("role", "status");
+    toast.setAttribute("aria-live", "polite");
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add("is-visible"));
+    setTimeout(() => {
+      toast.classList.remove("is-visible");
+      setTimeout(() => toast.remove(), 250);
+    }, 2200);
+  };
+
+  /* ---- Clipboard with graceful fallback ----------------------------- */
+  DT.copyText = function (text, btn) {
+    const done = () => {
+      const original = btn ? btn.textContent : "";
+      if (btn) {
+        btn.textContent = "Copied";
+        setTimeout(() => {
+          btn.textContent = original;
+        }, 1200);
+      }
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(fallback);
     } else {
+      fallback();
+    }
+    function fallback() {
       const ta = document.createElement("textarea");
       ta.value = text;
       ta.style.position = "fixed";
       ta.style.opacity = "0";
       document.body.appendChild(ta);
       ta.select();
-      document.execCommand("copy");
+      try {
+        document.execCommand("copy");
+        done();
+      } catch (e) {
+        DT.showToast("Copy failed");
+      }
       ta.remove();
     }
-    showToast("Copied to clipboard");
-  } catch {
-    showToast("Copy failed");
-  }
-}
+  };
 
-// Delegate any element with [data-copy] (holds the source selector) or
-// [data-copy-text] (holds literal text) to the copy helper.
-document.addEventListener("click", (e) => {
-  const target = e.target.closest("[data-copy], [data-copy-text]");
-  if (!target) return;
-  e.preventDefault();
-  if (target.hasAttribute("data-copy-text")) {
-    copyText(target.getAttribute("data-copy-text"));
-  } else {
-    const node = document.querySelector(target.getAttribute("data-copy"));
-    if (node) copyText(node.value ?? node.textContent ?? "");
-  }
-});
-
-if (document.readyState !== "loading") {
-  document.querySelectorAll(".year").forEach((e) => (e.textContent = new Date().getFullYear()));
-} else {
-  document.addEventListener("DOMContentLoaded", () =>
-    document.querySelectorAll(".year").forEach((e) => (e.textContent = new Date().getFullYear()))
-  );
-}
-
-window.DailyTools = { showToast, copyText };
+  /* ---- Delegated copy-button handler ---------------------------------
+     Tool pages mark copy triggers with:
+       data-copy="#selector"      → copy the text of that element
+       data-copy-text="..."       → copy this literal value (e.g. set by JS)
+     A single document-level listener serves every page. */
+  document.addEventListener("click", function (e) {
+    const trigger = e.target.closest("[data-copy], [data-copy-text]");
+    if (!trigger) return;
+    e.preventDefault();
+    let text = "";
+    if (trigger.hasAttribute("data-copy-text")) {
+      text = trigger.getAttribute("data-copy-text");
+    } else {
+      const target = document.querySelector(trigger.getAttribute("data-copy"));
+      if (!target) return;
+      text = target.value !== undefined && target.value !== ""
+        ? target.value
+        : target.textContent;
+    }
+    DT.copyText(text, trigger);
+  });
+})();

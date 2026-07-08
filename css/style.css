@@ -1,15 +1,12 @@
 /* =====================================================================
    Daily Tools — Design System
-   Mapped directly from DESIGN.md (Vercel-inspired).
-   Tailwind v4 CDN handles utilities; this file owns tokens, the card
-   pattern, the mesh gradient, and component chrome that the design
-   system needs beyond utility classes.
+   Vercel-inspired token system. This stylesheet owns the design tokens,
+   the card pattern, the mesh gradient, and component chrome. No CSS
+   framework (Tailwind) is used; styling is fully self-contained.
    ===================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap");
-
 :root {
-  /* ── Color tokens (DESIGN.md §Colors) ── */
+  /* ── Color tokens ── */
   --primary: #171717;
   --on-primary: #ffffff;
   --ink: #171717;
