@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Lesson Timer — Daily Tools</title>
-  <meta name="description" content="A clean countdown timer to pace lessons. Set minutes, start, pause, reset." />
+  <meta name="description" content="A clean countdown timer to pace lessons, workouts, or focus sessions. Set minutes, then start, pause, and reset — a simple browser-based lesson timer." />
+  <meta name="keywords" content="countdown timer, lesson timer, classroom timer, study timer, pomodoro timer, online timer" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/timer.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,6 +44,26 @@
         </div>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>How do I set the timer?</summary>
+        <p>Enter the number of minutes and press Start; the countdown begins immediately.</p>
+      </details>
+      <details>
+        <summary>Can I pause and resume?</summary>
+        <p>Yes. The Pause button freezes the clock and Start resumes from where you left off; Reset returns to the set time.</p>
+      </details>
+      <details>
+        <summary>Does it need an internet connection?</summary>
+        <p>No. Once loaded, the timer runs entirely in your browser.</p>
+      </details>
+      <details>
+        <summary>What is it useful for?</summary>
+        <p>Pacing lessons, timing tests, focus sessions, workouts, or any activity that needs a clear countdown.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -66,5 +87,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/timer.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I set the timer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the number of minutes and press Start; the countdown begins immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pause and resume?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Pause button freezes the clock and Start resumes from where you left off; Reset returns to the set time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it need an internet connection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Once loaded, the timer runs entirely in your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is it useful for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pacing lessons, timing tests, focus sessions, workouts, or any activity that needs a clear countdown."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

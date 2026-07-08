@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Rubric Scorer — Daily Tools</title>
-  <meta name="description" content="Score students against weighted criteria and get a normalized total." />
+  <meta name="description" content="Score students against weighted criteria and get a normalized total with this free rubric scorer. Add criteria, set weights and points, and see the result instantly." />
+  <meta name="keywords" content="rubric scorer, rubric calculator, grading rubric, weighted rubric, teacher grading tool, assignment scorer" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/rubric.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,6 +45,26 @@
         <p class="body-sm" id="info" style="color:var(--mute);margin:0;"></p>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>How does the rubric scorer work?</summary>
+        <p>Add each criterion with its weight and the points earned, and the tool computes a normalized total out of 100.</p>
+      </details>
+      <details>
+        <summary>What does 'weight' mean on a rubric?</summary>
+        <p>Weight shows how much a criterion counts toward the final score — a weight of 2 counts twice as much as a weight of 1.</p>
+      </details>
+      <details>
+        <summary>Can I add multiple criteria?</summary>
+        <p>Yes. Use 'Add criterion' for as many rows as your rubric needs.</p>
+      </details>
+      <details>
+        <summary>Is my data uploaded?</summary>
+        <p>No. All scoring happens locally in your browser.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -67,5 +88,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/rubric.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the rubric scorer work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add each criterion with its weight and the points earned, and the tool computes a normalized total out of 100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 'weight' mean on a rubric?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weight shows how much a criterion counts toward the final score — a weight of 2 counts twice as much as a weight of 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add multiple criteria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use 'Add criterion' for as many rows as your rubric needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All scoring happens locally in your browser."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

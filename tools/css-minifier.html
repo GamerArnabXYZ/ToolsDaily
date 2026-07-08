@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>CSS Minifier — Daily Tools</title>
-  <meta name="description" content="Strip comments and collapse whitespace from CSS. Fast, local, dependency-free." />
+  <meta name="description" content="Minify CSS in one click — strip comments and collapse whitespace to shrink your stylesheet. Fast, local, and dependency-free, with no uploads." />
+  <meta name="keywords" content="css minifier, minify css, css compressor, reduce css size, css optimizer, online css minifier" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/css-minifier.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,6 +41,26 @@
       <div class="panel"><span class="panel__label">CSS input</span><textarea id="in" class="text-input" placeholder=".btn { color: red; }" spellcheck="false"></textarea></div>
       <div class="panel"><span class="panel__label">Minified</span><pre id="out" class="text-output" style="min-height:200px;"></pre></div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What does minifying CSS do?</summary>
+        <p>It removes comments, extra spaces, and unnecessary characters to make the CSS file smaller, helping pages load faster.</p>
+      </details>
+      <details>
+        <summary>Is my CSS uploaded to a server?</summary>
+        <p>No. Minification runs locally in your browser, so your stylesheet never leaves your device.</p>
+      </details>
+      <details>
+        <summary>Will minified CSS still work the same?</summary>
+        <p>Yes. The output is functionally identical — only redundant whitespace and comments are removed.</p>
+      </details>
+      <details>
+        <summary>Should I keep the original CSS?</summary>
+        <p>Yes. Keep your readable source file and use the minified version for production.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -63,5 +84,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/css-minifier.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does minifying CSS do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It removes comments, extra spaces, and unnecessary characters to make the CSS file smaller, helping pages load faster."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my CSS uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Minification runs locally in your browser, so your stylesheet never leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will minified CSS still work the same?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The output is functionally identical — only redundant whitespace and comments are removed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I keep the original CSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Keep your readable source file and use the minified version for production."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Daily Tools — Free Online Tools for Students, Teachers & Developers</title>
-  <meta name="description" content="A blazing-fast collection of free everyday tools: JSON formatter, word counter, unit converter, password generator, lesson timers and more. No sign-up — just instant tools." />
+  <meta name="description" content="Daily Tools is a free, fast collection of browser-based utilities for students, teachers, and developers — JSON formatter, word counter, unit converter, password generator, grade and rubric calculators, timers, and more. No sign-up, no uploads, everything runs locally on your device." />
+  <meta name="keywords" content="free online tools, developer tools, student tools, teacher tools, browser tools, JSON formatter, word counter, unit converter, password generator, no sign up" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/" />
 
@@ -117,6 +118,26 @@
         <p class="no-results">No tools match your search. Try a different word.</p>
       </div>
     </section>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What tools does Daily Tools offer?</summary>
+        <p>Daily Tools bundles practical everyday utilities in one place: text and developer tools (JSON formatter, Base64, hash generator, CSS minifier, image-to-Base64), writing tools (word counter, citation builder), classroom tools (attendance tracker, grade calculator, rubric scorer, quiz maker, lesson timer), and everyday calculators (unit converter, tip calculator, color picker, password generator).</p>
+      </details>
+      <details>
+        <summary>Do I need to create an account?</summary>
+        <p>No. Every tool runs entirely in your browser and is free to use with no registration, login, or sign-up required.</p>
+      </details>
+      <details>
+        <summary>Is my data uploaded to a server?</summary>
+        <p>No. All processing happens locally on your device. Text, files, and inputs never leave your browser, so your data stays private.</p>
+      </details>
+      <details>
+        <summary>Does it work on mobile and desktop?</summary>
+        <p>Yes. The site is fully responsive and works on phones, tablets, and computers without any app install.</p>
+      </details>
+    </section>
   </main>
 
   <!-- ── Footer ── -->
@@ -172,5 +193,45 @@
   <script src="./js/tools-data.js" defer></script>
   <script src="./js/header-search.js" defer></script>
   <script src="./js/main.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What tools does Daily Tools offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Daily Tools bundles practical everyday utilities in one place: text and developer tools (JSON formatter, Base64, hash generator, CSS minifier, image-to-Base64), writing tools (word counter, citation builder), classroom tools (attendance tracker, grade calculator, rubric scorer, quiz maker, lesson timer), and everyday calculators (unit converter, tip calculator, color picker, password generator)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every tool runs entirely in your browser and is free to use with no registration, login, or sign-up required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All processing happens locally on your device. Text, files, and inputs never leave your browser, so your data stays private."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on mobile and desktop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The site is fully responsive and works on phones, tablets, and computers without any app install."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

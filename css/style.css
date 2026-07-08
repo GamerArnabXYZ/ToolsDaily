@@ -372,6 +372,17 @@ body { overscroll-behavior-y: none; }
 }
 .no-results.is-visible { display: block; }
 
+/* ── FAQ (home + tool pages) ── */
+.section-head { font-size: 14px; font-weight: 600; letter-spacing: .02em; color: var(--mute); text-transform: uppercase; margin: var(--s-4xl) 0 var(--s-md); }
+.faq { display: grid; gap: 12px; }
+.faq details { border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface); padding: 0 16px; }
+.faq details[open] { padding-bottom: 4px; }
+.faq summary { cursor: pointer; list-style: none; padding: 14px 0; font-weight: 600; font-size: 16px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--mute); transition: transform .2s ease; }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { margin: 0 0 16px; color: var(--body); line-height: 1.6; }
+
 /* ── Footer ── */
 .site-footer {
   background: var(--canvas);

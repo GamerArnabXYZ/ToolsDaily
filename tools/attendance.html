@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Attendance Tracker — Daily Tools</title>
-  <meta name="description" content="Add students, mark present or absent, and see the attendance rate." />
+  <meta name="description" content="Free attendance tracker that runs in your browser. Add students, mark them present or absent with one tap, and instantly see the attendance rate — no spreadsheet or login required." />
+  <meta name="keywords" content="attendance tracker, class attendance sheet, student attendance, present absent tracker, teacher attendance tool, free attendance app" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/attendance.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,6 +49,26 @@
         </div>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>How do I use the attendance tracker?</summary>
+        <p>Type a student's name and add them to the list. Tap the 'P' button to mark present or 'A' for absent; the present/absent counts and attendance rate update automatically.</p>
+      </details>
+      <details>
+        <summary>Is the attendance data saved or uploaded?</summary>
+        <p>No. Names and marks stay in your browser only — nothing is uploaded or stored on a server, so student data remains private.</p>
+      </details>
+      <details>
+        <summary>Can I reset the attendance sheet?</summary>
+        <p>Yes. Use the 'Clear all' button to empty the list and start a fresh roll call.</p>
+      </details>
+      <details>
+        <summary>Does it work offline?</summary>
+        <p>Yes. Once the page is loaded, the attendance tracker works without an internet connection.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -71,5 +92,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/attendance.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I use the attendance tracker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Type a student's name and add them to the list. Tap the 'P' button to mark present or 'A' for absent; the present/absent counts and attendance rate update automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the attendance data saved or uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Names and marks stay in your browser only — nothing is uploaded or stored on a server, so student data remains private."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I reset the attendance sheet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use the 'Clear all' button to empty the list and start a fresh roll call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Once the page is loaded, the attendance tracker works without an internet connection."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

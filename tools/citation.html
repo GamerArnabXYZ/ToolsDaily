@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Citation Builder — Daily Tools</title>
-  <meta name="description" content="Generate APA, MLA and Chicago references from a few fields. No account needed." />
+  <meta name="description" content="Build accurate APA, MLA, and Chicago citations in seconds. Enter a few details — author, title, year, publisher, URL — and copy a formatted reference with no account needed." />
+  <meta name="keywords" content="citation generator, APA citation, MLA citation, Chicago citation, bibliography maker, reference builder" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/citation.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,6 +52,26 @@
         <button class="btn-copy" type="button" data-copy="#cite-out">Copy citation</button>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>Which citation styles are supported?</summary>
+        <p>The citation builder generates references in APA, MLA, and Chicago styles. Pick a style and the format adjusts automatically.</p>
+      </details>
+      <details>
+        <summary>What information do I need to enter?</summary>
+        <p>Typically the author, title, year, and publisher or site. Adding a URL is optional but recommended for web sources.</p>
+      </details>
+      <details>
+        <summary>Is the generated citation guaranteed correct?</summary>
+        <p>The tool formats your input consistently, but always double-check against your institution's style guide, as edge cases can vary.</p>
+      </details>
+      <details>
+        <summary>Do I need an account to use it?</summary>
+        <p>No. The citation builder is free and runs in your browser with no sign-up.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -74,5 +95,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/citation.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which citation styles are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The citation builder generates references in APA, MLA, and Chicago styles. Pick a style and the format adjusts automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What information do I need to enter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically the author, title, year, and publisher or site. Adding a URL is optional but recommended for web sources."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the generated citation guaranteed correct?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool formats your input consistently, but always double-check against your institution's style guide, as edge cases can vary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account to use it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The citation builder is free and runs in your browser with no sign-up."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

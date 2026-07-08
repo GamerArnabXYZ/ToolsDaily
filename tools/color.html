@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Color Picker & Converter — Daily Tools</title>
-  <meta name="description" content="Pick a color and copy it as HEX, RGB or HSL." />
+  <meta name="description" content="Pick a color and convert it between HEX, RGB, and HSL instantly. A simple, browser-based color picker and converter with one-click copy for each format." />
+  <meta name="keywords" content="color picker, hex to rgb, rgb to hex, hsl converter, color code generator, color picker online" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/color.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,6 +44,26 @@
         <div class="field"><label>HSL</label><div style="display:flex;gap:8px;"><input id="hsl" /><button class="btn-copy" type="button" data-copy="#hsl">Copy</button></div></div>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>How do I convert HEX to RGB?</summary>
+        <p>Select a color with the picker or type a HEX value, and the RGB and HSL equivalents appear automatically for you to copy.</p>
+      </details>
+      <details>
+        <summary>What color formats are supported?</summary>
+        <p>The tool converts between HEX, RGB, and HSL — the three most common formats for web and design work.</p>
+      </details>
+      <details>
+        <summary>Can I copy each color value?</summary>
+        <p>Yes. Each format has its own copy button so you can grab HEX, RGB, or HSL individually.</p>
+      </details>
+      <details>
+        <summary>Is the color picker free?</summary>
+        <p>Yes, it runs entirely in your browser with no uploads or sign-up.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -66,5 +87,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/color.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert HEX to RGB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Select a color with the picker or type a HEX value, and the RGB and HSL equivalents appear automatically for you to copy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What color formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool converts between HEX, RGB, and HSL — the three most common formats for web and design work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I copy each color value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each format has its own copy button so you can grab HEX, RGB, or HSL individually."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the color picker free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it runs entirely in your browser with no uploads or sign-up."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

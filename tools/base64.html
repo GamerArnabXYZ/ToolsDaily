@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Base64 Encode / Decode — Daily Tools</title>
-  <meta name="description" content="Encode and decode text to and from Base64, entirely in your browser." />
+  <meta name="description" content="Instantly encode text to Base64 or decode Base64 back to text, entirely in your browser. A simple, private Base64 encoder/decoder with no uploads and no limits." />
+  <meta name="keywords" content="base64 encoder, base64 decoder, encode to base64, decode base64, base64 online, text to base64" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/base64.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,6 +42,26 @@
       <div class="panel"><span class="panel__label">Input</span><textarea id="in" class="text-input" placeholder="Type text to encode, or Base64 to decode" spellcheck="false"></textarea></div>
       <div class="panel"><span class="panel__label">Output</span><pre id="out" class="text-output" style="min-height:200px;"></pre></div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What is Base64 used for?</summary>
+        <p>Base64 encodes binary or text data into ASCII so it can travel safely in text-only channels like emails, JSON, URLs, and data URLs.</p>
+      </details>
+      <details>
+        <summary>Is my text uploaded when I encode or decode?</summary>
+        <p>No. Encoding and decoding happen locally in your browser; your text never leaves your device.</p>
+      </details>
+      <details>
+        <summary>What is the difference between encode and decode?</summary>
+        <p>Encode converts plain text into a Base64 string; decode reverses it, turning a Base64 string back into the original text.</p>
+      </details>
+      <details>
+        <summary>Can I Base64 a large file?</summary>
+        <p>For text it works fine, but for files use the Image to Base64 tool, which is built for binary data.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -64,5 +85,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/base64.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Base64 used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Base64 encodes binary or text data into ASCII so it can travel safely in text-only channels like emails, JSON, URLs, and data URLs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text uploaded when I encode or decode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Encoding and decoding happen locally in your browser; your text never leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between encode and decode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Encode converts plain text into a Base64 string; decode reverses it, turning a Base64 string back into the original text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I Base64 a large file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For text it works fine, but for files use the Image to Base64 tool, which is built for binary data."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Tip Calculator — Daily Tools</title>
-  <meta name="description" content="Split a bill and tip across a group in seconds." />
+  <meta name="description" content="Split a bill and calculate the tip in seconds. Enter the bill, tip percentage, and number of people to get the tip, total, and per-person amount — free and instant." />
+  <meta name="keywords" content="tip calculator, split bill, calculate tip, bill splitter, gratuity calculator, restaurant tip" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/tip.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,6 +48,26 @@
         </div>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>How do I calculate a tip?</summary>
+        <p>Enter the bill total and tip percentage; the tool shows the tip amount and the full total.</p>
+      </details>
+      <details>
+        <summary>Can it split the bill between people?</summary>
+        <p>Yes. Enter the number of people and it shows how much each person pays.</p>
+      </details>
+      <details>
+        <summary>Is the calculation stored?</summary>
+        <p>No. Everything is computed locally in your browser as you type.</p>
+      </details>
+      <details>
+        <summary>What tip percentage should I use?</summary>
+        <p>Common restaurant tips are 15–20%; the default is 15% but you can enter any value.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -70,5 +91,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/tip.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate a tip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the bill total and tip percentage; the tool shows the tip amount and the full total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it split the bill between people?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter the number of people and it shows how much each person pays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the calculation stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything is computed locally in your browser as you type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tip percentage should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common restaurant tips are 15–20%; the default is 15% but you can enter any value."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

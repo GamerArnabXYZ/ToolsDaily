@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Word Counter — Daily Tools</title>
-  <meta name="description" content="Count words, characters, sentences and reading time instantly. Free, private word counter that runs in your browser." />
+  <meta name="description" content="Count words, characters, sentences, and reading time instantly with this free, private word counter. Paste your text and get live stats — nothing leaves your browser." />
+  <meta name="keywords" content="word counter, character count, count words, word count tool, reading time, text counter" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/word-counter.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -64,6 +65,26 @@
     </section>
 
     <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What does the word counter measure?</summary>
+        <p>It counts words, characters (with and without spaces), sentences, and estimates reading time as you type.</p>
+      </details>
+      <details>
+        <summary>Is my text uploaded?</summary>
+        <p>No. Counting happens locally in your browser, so your writing stays private.</p>
+      </details>
+      <details>
+        <summary>Does it update in real time?</summary>
+        <p>Yes. Stats update instantly as you type or paste text into the box.</p>
+      </details>
+      <details>
+        <summary>Why is reading time useful?</summary>
+        <p>It helps you gauge how long a piece will take to read — handy for essays, articles, and social posts.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -90,5 +111,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/word-counter.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the word counter measure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It counts words, characters (with and without spaces), sentences, and estimates reading time as you type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Counting happens locally in your browser, so your writing stays private."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it update in real time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Stats update instantly as you type or paste text into the box."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is reading time useful?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It helps you gauge how long a piece will take to read — handy for essays, articles, and social posts."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

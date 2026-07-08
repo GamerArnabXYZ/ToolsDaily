@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Hash Generator — Daily Tools</title>
-  <meta name="description" content="Compute MD5, SHA-1 and SHA-256 of any text. SHA uses the browser crypto API." />
+  <meta name="description" content="Generate MD5, SHA-1, and SHA-256 hashes of any text instantly in your browser using the Web Crypto API. A private hash generator with no uploads." />
+  <meta name="keywords" content="hash generator, sha256 generator, md5 hash, sha1 hash, text hash, checksum generator" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/hash.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,6 +44,26 @@
         <button class="btn-copy" type="button" data-copy-text="" id="copyall">Copy SHA-256</button>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What is a hash used for?</summary>
+        <p>A hash turns text into a fixed-length fingerprint used to verify integrity, compare values, or store references without exposing the original.</p>
+      </details>
+      <details>
+        <summary>Which algorithms are supported?</summary>
+        <p>The tool computes MD5, SHA-1, and SHA-256. SHA-256 uses the browser's secure Web Crypto API.</p>
+      </details>
+      <details>
+        <summary>Is hashing the same as encryption?</summary>
+        <p>No. A hash is one-way and cannot be reversed, whereas encryption is designed to be decrypted.</p>
+      </details>
+      <details>
+        <summary>Is my input uploaded?</summary>
+        <p>No. Hashing runs locally in your browser and your text never leaves your device.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -66,5 +87,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/hash.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a hash used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A hash turns text into a fixed-length fingerprint used to verify integrity, compare values, or store references without exposing the original."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which algorithms are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool computes MD5, SHA-1, and SHA-256. SHA-256 uses the browser's secure Web Crypto API."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is hashing the same as encryption?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A hash is one-way and cannot be reversed, whereas encryption is designed to be decrypted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my input uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Hashing runs locally in your browser and your text never leaves your device."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

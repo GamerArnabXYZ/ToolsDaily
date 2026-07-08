@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Image to Base64 — Daily Tools</title>
-  <meta name="description" content="Read an image and copy its data URL, or inspect basic file metadata — no upload." />
+  <meta name="description" content="Convert an image to a Base64 data URL in your browser — read the file, copy its data URL, and inspect basic metadata. No upload, fully private." />
+  <meta name="keywords" content="image to base64, base64 image, image data url, embed image, image converter, base64 encoder image" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/image.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,6 +45,26 @@
         <button class="btn-copy" type="button" data-copy="#out">Copy</button>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What does image-to-Base64 do?</summary>
+        <p>It reads an image file and produces a Base64 data URL you can paste directly into HTML, CSS, or JSON — handy for embedding small images.</p>
+      </details>
+      <details>
+        <summary>Is my image uploaded anywhere?</summary>
+        <p>No. The file is read locally in your browser and never sent to a server.</p>
+      </details>
+      <details>
+        <summary>Can I see image metadata?</summary>
+        <p>Yes. The tool shows basic file details such as type and size alongside the data URL.</p>
+      </details>
+      <details>
+        <summary>When should I use a data URL?</summary>
+        <p>Data URLs are best for small images you want to embed inline without an extra request; large images can bloat your file.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -67,5 +88,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/image.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does image-to-Base64 do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It reads an image file and produces a Base64 data URL you can paste directly into HTML, CSS, or JSON — handy for embedding small images."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my image uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The file is read locally in your browser and never sent to a server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see image metadata?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The tool shows basic file details such as type and size alongside the data URL."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use a data URL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Data URLs are best for small images you want to embed inline without an extra request; large images can bloat your file."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

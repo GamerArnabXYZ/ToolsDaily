@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Unit Converter — Daily Tools</title>
-  <meta name="description" content="Convert length, mass, temperature and more between units instantly. Free unit converter that runs in your browser." />
+  <meta name="description" content="Convert length, mass, temperature, and more between units instantly with this free unit converter. Accurate, browser-based, and private — no uploads." />
+  <meta name="keywords" content="unit converter, convert units, length converter, weight converter, temperature converter, measurement converter" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/unit.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,6 +68,26 @@
     </section>
 
     <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>Which unit categories are supported?</summary>
+        <p>The converter covers common categories such as length, mass (weight), and temperature, with more selectable from the dropdown.</p>
+      </details>
+      <details>
+        <summary>How do I convert between units?</summary>
+        <p>Pick a category, choose the from and to units, type an amount, and the result appears instantly.</p>
+      </details>
+      <details>
+        <summary>Is the conversion accurate?</summary>
+        <p>Yes. Conversions use standard factors; temperature uses the correct formula rather than a simple ratio.</p>
+      </details>
+      <details>
+        <summary>Is my input uploaded?</summary>
+        <p>No. All conversions happen locally in your browser.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -90,5 +111,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/unit.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which unit categories are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The converter covers common categories such as length, mass (weight), and temperature, with more selectable from the dropdown."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert between units?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick a category, choose the from and to units, type an amount, and the result appears instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the conversion accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Conversions use standard factors; temperature uses the correct formula rather than a simple ratio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my input uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All conversions happen locally in your browser."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

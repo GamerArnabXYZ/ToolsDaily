@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Quiz Maker — Daily Tools</title>
-  <meta name="description" content="Build a quick multiple-choice quiz and let students answer inline." />
+  <meta name="description" content="Build a quick multiple-choice quiz and let students answer inline — right in your browser. Add questions, set the correct answer, and get an instant score. No account needed." />
+  <meta name="keywords" content="quiz maker, online quiz, multiple choice quiz, classroom quiz, quiz builder, free quiz maker" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/quiz.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,6 +46,26 @@
         <div id="score" style="font-size:28px;font-weight:600;"></div>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>How do I create a quiz?</summary>
+        <p>Add questions, type the correct answer and a wrong option for each, then press 'Start quiz' to let someone answer inline.</p>
+      </details>
+      <details>
+        <summary>Does it score the quiz automatically?</summary>
+        <p>Yes. After each answer the tool marks it right or wrong and shows the final correct count when finished.</p>
+      </details>
+      <details>
+        <summary>Is the quiz saved anywhere?</summary>
+        <p>No. Questions and answers stay in your browser and are not uploaded or stored.</p>
+      </details>
+      <details>
+        <summary>Can I use this in class?</summary>
+        <p>Yes. It is designed for quick, low-prep classroom checks with no login required.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -68,5 +89,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/quiz.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I create a quiz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add questions, type the correct answer and a wrong option for each, then press 'Start quiz' to let someone answer inline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it score the quiz automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. After each answer the tool marks it right or wrong and shows the final correct count when finished."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the quiz saved anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Questions and answers stay in your browser and are not uploaded or stored."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this in class?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It is designed for quick, low-prep classroom checks with no login required."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>JSON Formatter — Daily Tools</title>
-  <meta name="description" content="Pretty-print, validate, and minify JSON instantly in your browser. Free JSON formatter with no uploads." />
+  <meta name="description" content="Pretty-print, validate, and minify JSON instantly in your browser. A free JSON formatter that catches errors, formats your data, and copies the result — no uploads." />
+  <meta name="keywords" content="json formatter, json beautifier, pretty print json, validate json, minify json, json validator online" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/json-formatter.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,6 +53,26 @@
     </section>
 
     <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What does the JSON formatter do?</summary>
+        <p>It takes raw JSON and reformats it with proper indentation (beautify), or condenses it (minify), while validating the syntax.</p>
+      </details>
+      <details>
+        <summary>How do I know if my JSON is valid?</summary>
+        <p>The status line reports whether the input is valid JSON and shows an error message if something is wrong.</p>
+      </details>
+      <details>
+        <summary>Is my JSON uploaded?</summary>
+        <p>No. Formatting happens locally in your browser, so your data stays private.</p>
+      </details>
+      <details>
+        <summary>Can I load a sample to test?</summary>
+        <p>Yes. The 'Load sample' button fills the editor with example JSON so you can try it immediately.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -75,5 +96,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/json-formatter.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the JSON formatter do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It takes raw JSON and reformats it with proper indentation (beautify), or condenses it (minify), while validating the syntax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if my JSON is valid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The status line reports whether the input is valid JSON and shows an error message if something is wrong."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my JSON uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Formatting happens locally in your browser, so your data stays private."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I load a sample to test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The 'Load sample' button fills the editor with example JSON so you can try it immediately."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

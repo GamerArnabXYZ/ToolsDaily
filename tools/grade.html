@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Grade Calculator — Daily Tools</title>
-  <meta name="description" content="Weight your assignments into a final grade. Add rows, set weights, get the total." />
+  <meta name="description" content="Calculate your final grade from weighted assignments in seconds. Add rows, set each weight, and get the total — a free, private grade calculator for students and teachers." />
+  <meta name="keywords" content="grade calculator, weighted grade calculator, final grade calculator, calculate my grade, assignment weight calculator" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/grade.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,6 +45,26 @@
         <p class="body-sm" id="breakdown" style="color:var(--mute);margin:0;"></p>
       </div>
     </section>    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+  
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>How are grades calculated?</summary>
+        <p>Each row's score is multiplied by its weight, the weighted totals are summed, and divided by the total weight to produce your final grade.</p>
+      </details>
+      <details>
+        <summary>What does the weight mean?</summary>
+        <p>Weight is the percentage a task contributes to the final grade — for example, a midterm worth 30% gets a weight of 30.</p>
+      </details>
+      <details>
+        <summary>Can I add more than a few assignments?</summary>
+        <p>Yes. Use 'Add row' as many times as you need to include every graded item.</p>
+      </details>
+      <details>
+        <summary>Is my data stored?</summary>
+        <p>No. All calculations happen in your browser and nothing is saved or uploaded.</p>
+      </details>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -67,5 +88,45 @@
 <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
   <script src="../js/tool-utils.js" defer></script>
   <script src="../js/grade.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How are grades calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each row's score is multiplied by its weight, the weighted totals are summed, and divided by the total weight to produce your final grade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the weight mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weight is the percentage a task contributes to the final grade — for example, a midterm worth 30% gets a weight of 30."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add more than a few assignments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use 'Add row' as many times as you need to include every graded item."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All calculations happen in your browser and nothing is saved or uploaded."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>
