@@ -12,18 +12,24 @@ function initHeaderSearch() {
   input.disabled = false;
   input.removeAttribute("disabled");
 
+  const submit = () => {
+    const q = input.value.trim();
+    if (!q) {
+      window.location.href = "search.html";
+      return;
+    }
+    window.location.href = "search.html?q=" + encodeURIComponent(q);
+  };
+
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      const q = input.value.trim();
-      if (!q) {
-        // Empty query -> just go to the search page (shows all / hint).
-        window.location.href = "search.html";
-        return;
-      }
-      window.location.href = "search.html?q=" + encodeURIComponent(q);
+      submit();
     }
   });
+
+  const btn = input.parentElement.querySelector("[data-search-submit]");
+  if (btn) btn.addEventListener("click", submit);
 }
 
 if (document.readyState === "loading") {

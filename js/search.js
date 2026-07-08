@@ -42,6 +42,10 @@ function renderSearch() {
     t.category.toLowerCase().includes(q)
   );
 
+  // Reflect the query back into the header search box so re-search works.
+  const input = document.getElementById("site-search");
+  if (input) input.value = q;
+
   title.textContent = "Results for “" + q + "”";
   sub.textContent =
     matches.length +
