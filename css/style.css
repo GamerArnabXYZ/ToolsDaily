@@ -90,13 +90,21 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* Prevent accidental text selection / grey flash on tap targets. */
-a, button, [role="button"] {
+/* Prevent grey tap flash + long-press copy menu on interactive/tappable
+   elements. Inputs/textarea keep selection so users can still copy there. */
+a, button, [role="button"], img, svg {
   -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
-/* No horizontal scroll / rubber-banding past content edges. */
-html, body { overflow-x: hidden; max-width: 100%; }
+/* Disable long-press text selection ("hold to copy") site-wide,
+   but keep form fields selectable/editable. */
+body { -webkit-user-select: none; user-select: none; }
+input, textarea, select { -webkit-user-select: text; user-select: text; }
+
+/* Prevent horizontal scroll only — keep vertical scrolling working.
+   Must be on html (and not clip body), or it breaks page scroll on mobile. */
+html { overflow-x: hidden; }
 body { overscroll-behavior-y: none; }
 
 /* Use dynamic viewport height where supported so mobile address bars
