@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Tip Calculator — Daily Tools</title>
-  <meta name="description" content="Split a bill and calculate the tip in seconds. Enter the bill, tip percentage, and number of people to get the tip, total, and per-person amount — free and instant." />
+  <title>Tip Calculator — Split the Bill & Tip Instantly | Daily Tools</title>
+  <meta name="description" content="Calculate tip and split the bill in seconds. Enter the amount, tip percent, and number of people to get totals per person — free, fast, no signup." />
   <meta name="keywords" content="tip calculator, split bill, calculate tip, bill splitter, gratuity calculator, restaurant tip" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdaily.netlify.app/tools/tip.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolsdaily.netlify.app/tools/tip.html" />
+  <meta property="og:title" content="Tip Calculator — Split the Bill & Tip Instantly | Daily Tools" />
+  <meta property="og:description" content="Calculate tip and split the bill in seconds. Enter the amount, tip percent, and number of people to get totals per person — free, fast, no signup." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tip Calculator — Split the Bill & Tip Instantly | Daily Tools" />
+  <meta name="twitter:description" content="Calculate tip and split the bill in seconds. Enter the amount, tip percent, and number of people to get totals per person — free, fast, no signup." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/fonts.css" />
@@ -66,6 +73,10 @@
       <details>
         <summary>What tip percentage should I use?</summary>
         <p>Common restaurant tips are 15–20%; the default is 15% but you can enter any value.</p>
+      </details>
+      <details>
+        <summary>Can I split the bill unevenly between people?</summary>
+        <p>This calculator splits evenly by headcount. For custom uneven splits, adjust each person's share manually using the per-person total as your base.</p>
       </details>
     </section>
   </main>
@@ -126,6 +137,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Common restaurant tips are 15–20%; the default is 15% but you can enter any value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I split the bill unevenly between people?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator splits evenly by headcount. For custom uneven splits, adjust each person's share manually using the per-person total as your base."
       }
     }
   ]
