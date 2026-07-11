@@ -1,6 +1,7 @@
 /* Daily Tools — web fonts.
-   Loaded as a dedicated stylesheet (via <link>) instead of an @import in
-   style.css so the browser can fetch it in parallel with the rest of the
-   critical CSS rather than blocking on a chained request. */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap");
+   DEPRECATED: this file previously used @import for Google Fonts, which
+   created an extra render-blocking hop (HTML -> fonts.css -> Google Fonts
+   CSS -> woff2 files), adding ~1.4s to the critical path and hurting
+   FCP/LCP. All pages now link Google Fonts directly in <head>, in
+   parallel with the preconnect hints. This file is kept empty so any
+   stale cached reference doesn't 404. */

@@ -7,6 +7,41 @@
   status = 301
 
 [[redirects]]
+  from = "/tools/attendance.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tools/rubric.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tools/citation.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tools/tip.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tools/timer.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tools/quiz.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tools/grade.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
