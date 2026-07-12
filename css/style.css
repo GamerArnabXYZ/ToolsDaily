@@ -582,3 +582,42 @@ input[type="range"] {
   width: 100%;
   accent-color: var(--primary);
 }
+
+/* ── Language banner (i18n) ── */
+.lang-banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-sm);
+  padding: 10px var(--s-lg);
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  position: relative;
+}
+.lang-banner span { flex: 1 1 auto; min-width: 160px; }
+.lang-banner__btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.lang-banner__btns a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: var(--r-sm);
+  padding: 6px 12px;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+}
+.lang-banner__btns a:hover { background: rgba(255,255,255,.12); }
+.lang-banner__close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+}
+.lang-banner--active { background: var(--primary); }

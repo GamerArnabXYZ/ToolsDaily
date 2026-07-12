@@ -1,0 +1,345 @@
+{
+  "eyebrow_free": {
+    "en": "Free · No sign-up · Instant",
+    "hi": "मुफ़्त · साइन-अप की ज़रूरत नहीं · तुरंत",
+    "bn": "ফ্রি · কোনো সাইন-আপ লাগবে না · তাৎক্ষণিক",
+    "hinglish": "Free · Sign-up ki zaroorat nahi · Instant",
+    "banglish": "Free · Sign-up lagbe na · Instant"
+  },
+  "hero_title": {
+    "en": "Everyday tools, ready in a click.",
+    "hi": "रोज़मर्रा के काम, बस एक क्लिक में।",
+    "bn": "দৈনন্দিন কাজের টুলস, এক ক্লিকেই রেডি।",
+    "hinglish": "Everyday tools, bas ek click mein ready.",
+    "banglish": "Protidiner tools, ek click-ei ready."
+  },
+  "hero_subtitle": {
+    "en": "A small, fast collection of utilities for students and developers. No tracking, no clutter — just the tool you need, when you need it.",
+    "hi": "स्टूडेंट्स और डेवलपर्स के लिए यूटिलिटीज़ का एक छोटा और तेज़ कलेक्शन। कोई ट्रैकिंग नहीं, कोई फालतू चीज़ नहीं — बस वही टूल जो आपको चाहिए।",
+    "bn": "স্টুডেন্ট আর ডেভেলপারদের জন্য ইউটিলিটি টুলসের একটা ছোট, ফাস্ট কালেকশন। কোনো ট্র্যাকিং নেই, কোনো ঝামেলা নেই — শুধু যে টুলটা দরকার, যখন প্রয়োজন।",
+    "hinglish": "Students aur developers ke liye utilities ka ek chhota, fast collection. No tracking, no clutter — bas wahi tool jo chahiye, jab chahiye.",
+    "banglish": "Students ar developers-der jonno utilities-er ekta chhotto, fast collection. No tracking, no clutter — shudhu shei tool-ta jeta lagbe, jokhon sheta proyojon."
+  },
+  "btn_start_now": {
+    "en": "Start now",
+    "hi": "अभी शुरू करें",
+    "bn": "শুরু করুন",
+    "hinglish": "Abhi start karo",
+    "banglish": "Ekhoni shuru koro"
+  },
+  "btn_see_featured": {
+    "en": "See featured",
+    "hi": "फ़ीचर्ड देखें",
+    "bn": "ফিচার্ড টুলস দেখুন",
+    "hinglish": "Featured tools dekho",
+    "banglish": "Featured tools dekho"
+  },
+  "nav_about": {
+    "en": "About Us",
+    "hi": "हमारे बारे में",
+    "bn": "আমাদের সম্পর্কে",
+    "hinglish": "About Us",
+    "banglish": "Amader shomporke"
+  },
+  "nav_contact": {
+    "en": "Contact Us",
+    "hi": "संपर्क करें",
+    "bn": "যোগাযোগ",
+    "hinglish": "Contact us",
+    "banglish": "Contact koro"
+  },
+  "nav_privacy": {
+    "en": "Privacy Policy",
+    "hi": "प्राइवेसी पॉलिसी",
+    "bn": "প্রাইভেসি পলিসি",
+    "hinglish": "Privacy Policy",
+    "banglish": "Privacy Policy"
+  },
+  "nav_terms": {
+    "en": "Terms & Conditions",
+    "hi": "नियम और शर्तें",
+    "bn": "শর্তাবলী",
+    "hinglish": "Terms & Conditions",
+    "banglish": "Terms & Conditions"
+  },
+  "search_placeholder": {
+    "en": "Search tools…",
+    "hi": "टूल्स सर्च करें…",
+    "bn": "টুলস সার্চ করুন…",
+    "hinglish": "Tools search karo…",
+    "banglish": "Tools search koro…"
+  },
+  "search_button": {
+    "en": "Search",
+    "hi": "सर्च",
+    "bn": "সার্চ",
+    "hinglish": "Search",
+    "banglish": "Search"
+  },
+  "browse_all_btn": {
+    "en": "Browse all",
+    "hi": "सभी देखें",
+    "bn": "সবগুলো দেখুন",
+    "hinglish": "Sab dekho",
+    "banglish": "Shob dekho"
+  },
+  "featured_eyebrow": {
+    "en": "Featured",
+    "hi": "फ़ीचर्ड",
+    "bn": "ফিচার্ড",
+    "hinglish": "Featured",
+    "banglish": "Featured"
+  },
+  "featured_title": {
+    "en": "Most-used tools today.",
+    "hi": "आज सबसे ज़्यादा यूज़ होने वाले टूल्स।",
+    "bn": "আজকের মোস্ট-ইউজড টুলস।",
+    "hinglish": "Aaj ke most-used tools.",
+    "banglish": "Ajker most-used tools."
+  },
+  "featured_subtitle": {
+    "en": "Reach for these first — they cover the daily grind for most visitors.",
+    "hi": "इनसे शुरुआत करें — ज़्यादातर यूज़र्स की रोज़मर्रा की ज़रूरतें इनमें पूरी हो जाती हैं।",
+    "bn": "এগুলো আগে ট্রাই করুন — বেশিরভাগ ভিজিটরের দৈনন্দিন কাজের জন্য এগুলোই যথেষ্ট।",
+    "hinglish": "Inse shuruat karo — zyadatar users ki daily zarooratein inse poori ho jaati hain.",
+    "banglish": "Egulo aage try koro — beshirbhag visitor-der daily kajer jonno egulo i enough."
+  },
+  "card_word_counter_title": {
+    "en": "Word Counter",
+    "hi": "वर्ड काउंटर",
+    "bn": "ওয়ার্ড কাউন্টার",
+    "hinglish": "Word Counter",
+    "banglish": "Word Counter"
+  },
+  "card_word_counter_desc": {
+    "en": "Count words, characters, sentences and reading time.",
+    "hi": "शब्द, कैरेक्टर, वाक्य और रीडिंग टाइम काउंट करें।",
+    "bn": "ওয়ার্ড, ক্যারেক্টার, বাক্য আর রিডিং টাইম গুনুন।",
+    "hinglish": "Words, characters, sentences aur reading time count karo.",
+    "banglish": "Word, character, bakko ar reading time count koro."
+  },
+  "card_json_title": {
+    "en": "JSON Formatter",
+    "hi": "JSON फ़ॉर्मेटर",
+    "bn": "JSON ফরম্যাটার",
+    "hinglish": "JSON Formatter",
+    "banglish": "JSON Formatter"
+  },
+  "card_json_desc": {
+    "en": "Pretty-print, validate and minify JSON instantly.",
+    "hi": "JSON को तुरंत फ़ॉर्मेट, वैलिडेट और मिनिफ़ाई करें।",
+    "bn": "JSON ইনস্ট্যান্টলি ফরম্যাট, ভ্যালিডেট আর মিনিফাই করুন।",
+    "hinglish": "JSON ko turant format, validate aur minify karo.",
+    "banglish": "JSON turontto format, validate ar minify koro."
+  },
+  "card_password_title": {
+    "en": "Password Generator",
+    "hi": "पासवर्ड जेनरेटर",
+    "bn": "পাসওয়ার্ড জেনারেটর",
+    "hinglish": "Password Generator",
+    "banglish": "Password Generator"
+  },
+  "card_password_desc": {
+    "en": "Strong, copy-ready random passwords in a tap.",
+    "hi": "एक टैप में मज़बूत, कॉपी-रेडी रैंडम पासवर्ड पाएं।",
+    "bn": "এক ট্যাপে স্ট্রং, কপি-রেডি র‍্যান্ডম পাসওয়ার্ড বানান।",
+    "hinglish": "Ek tap mein strong, copy-ready random password pao.",
+    "banglish": "Ek tap e strong, copy-ready random password banan."
+  },
+  "card_unit_title": {
+    "en": "Unit Converter",
+    "hi": "यूनिट कन्वर्टर",
+    "bn": "ইউনিট কনভার্টার",
+    "hinglish": "Unit Converter",
+    "banglish": "Unit Converter"
+  },
+  "card_unit_desc": {
+    "en": "Length, mass, temperature and more, converted live.",
+    "hi": "लेंथ, मास, टेम्परेचर और बहुत कुछ, लाइव कन्वर्ट करें।",
+    "bn": "দৈর্ঘ্য, ভর, তাপমাত্রা আর আরও অনেক কিছু, লাইভ কনভার্ট করুন।",
+    "hinglish": "Length, mass, temperature aur bahut kuch, live convert karo.",
+    "banglish": "Length, mass, temperature ar onek kichu, live convert koro."
+  },
+  "alltools_eyebrow": {
+    "en": "All tools",
+    "hi": "सभी टूल्स",
+    "bn": "সব টুলস",
+    "hinglish": "All tools",
+    "banglish": "Shob tools"
+  },
+  "alltools_title": {
+    "en": "Browse the full toolkit.",
+    "hi": "हमारी पूरी टूलकिट देखें।",
+    "bn": "পুরো টুলকিট ব্রাউজ করুন।",
+    "hinglish": "Poori toolkit browse karo.",
+    "banglish": "Puro toolkit browse koro."
+  },
+  "alltools_subtitle": {
+    "en": "Filter by who you are, or just type what you need.",
+    "hi": "कैटेगरी के हिसाब से फ़िल्टर करें, या बस सर्च करें जो आपको चाहिए।",
+    "bn": "ক্যাটাগরি অনুযায়ী ফিল্টার করুন, বা যেটা দরকার সেটা সার্চ করুন।",
+    "hinglish": "Category ke hisab se filter karo, ya bas search karo jo chahiye.",
+    "banglish": "Category onujayi filter koro, ba shudhu search koro ja lagbe."
+  },
+  "no_results": {
+    "en": "No tools match your search. Try a different word.",
+    "hi": "आपकी सर्च से कोई टूल मैच नहीं हुआ। दूसरा शब्द ट्राई करें।",
+    "bn": "আপনার সার্চের সাথে কোনো টুল ম্যাচ করেনি। অন্য কিছু ট্রাই করুন।",
+    "hinglish": "Tumhari search se koi tool match nahi hua. Doosra word try karo.",
+    "banglish": "Tomar search-er shathe kono tool match kore ni. Onno kichu try koro."
+  },
+  "faq_heading": {
+    "en": "Frequently asked questions",
+    "hi": "अक्सर पूछे जाने वाले सवाल (FAQ)",
+    "bn": "জিজ্ঞাসিত প্রশ্নাবলী (FAQ)",
+    "hinglish": "Frequently asked questions (FAQ)",
+    "banglish": "Frequently asked questions (FAQ)"
+  },
+  "faq_q1": {
+    "en": "What tools does Daily Tools offer?",
+    "hi": "Daily Tools पर क्या-क्या मिलता है?",
+    "bn": "Daily Tools-এ কী কী পাওয়া যায়?",
+    "hinglish": "Daily Tools pe kya-kya milta hai?",
+    "banglish": "Daily Tools-e ki ki paoa jay?"
+  },
+  "faq_a1": {
+    "en": "Daily Tools bundles practical everyday utilities in one place: developer tools (JSON formatter, Base64, hash generator, CSS minifier, image-to-Base64), a word counter, a unit converter, a color picker, and a password generator.",
+    "hi": "Daily Tools में आपको काम के यूटिलिटी टूल्स एक ही जगह मिलते हैं: डेवलपर टूल्स (JSON फ़ॉर्मेटर, Base64, हैश जेनरेटर, CSS मिनिफ़ायर, इमेज-टू-Base64), वर्ड काउंटर, यूनिट कन्वर्टर, कलर पिकर और पासवर्ड जेनरेटर।",
+    "bn": "Daily Tools-এ আপনি দরকারি সব ইউটিলিটি টুলস এক জায়গায় পাবেন: ডেভেলপার টুলস (JSON ফরম্যাটার, Base64, হ্যাশ জেনারেটর, CSS মিনিফায়ার, ইমেজ-টু-Base64), ওয়ার্ড কাউন্টার, ইউনিট কনভার্টার, কালার পিকার আর পাসওয়ার্ড জেনারেটর।",
+    "hinglish": "Daily Tools mein aapko kaam ke utility tools ek hi jagah milte hain: developer tools (JSON formatter, Base64, hash generator, CSS minifier, image-to-Base64), word counter, unit converter, color picker aur password generator.",
+    "banglish": "Daily Tools-e apni dorkari sob utility tools ek jaygay paben: developer tools (JSON formatter, Base64, hash generator, CSS minifier, image-to-Base64), word counter, unit converter, color picker ar password generator."
+  },
+  "faq_q2": {
+    "en": "Do I need to create an account?",
+    "hi": "क्या मुझे अकाउंट बनाने की ज़रूरत है?",
+    "bn": "অ্যাকাউন্ট বানানোর দরকার আছে কি?",
+    "hinglish": "Kya mujhe account banane ki zaroorat hai?",
+    "banglish": "Account bananor dorkar ache ki?"
+  },
+  "faq_a2": {
+    "en": "No. Every tool runs entirely in your browser and is free to use with no registration, login, or sign-up required.",
+    "hi": "बिल्कुल नहीं। सारे टूल्स आपके ब्राउज़र में ही चलते हैं और पूरी तरह फ़्री हैं — कोई रजिस्ट्रेशन या लॉगिन नहीं चाहिए।",
+    "bn": "একদম না। সব টুলস আপনার ব্রাউজারেই চলে আর পুরোটাই ফ্রি — কোনো রেজিস্ট্রেশন বা লগইন করার ঝামেলা নেই।",
+    "hinglish": "Bilkul nahi. Saare tools aapke browser mein hi chalte hain aur poori tarah free hain — koi registration ya login nahi chahiye.",
+    "banglish": "Ekdom na. Sob tools tomar browser-ei chole ar purotai free — kono registration ba login korar jhamela nei."
+  },
+  "faq_q3": {
+    "en": "Is my data uploaded to a server?",
+    "hi": "क्या मेरा डेटा सर्वर पर अपलोड होता है?",
+    "bn": "আমার ডেটা কি সার্ভারে আপলোড হয়?",
+    "hinglish": "Kya mera data server pe upload hota hai?",
+    "banglish": "Amar data ki server-e upload hoy?"
+  },
+  "faq_a3": {
+    "en": "No. All processing happens locally on your device. Text, files, and inputs never leave your browser, so your data stays private.",
+    "hi": "नहीं। सारी प्रोसेसिंग आपके डिवाइस पर ही होती है। आपका डेटा ब्राउज़र से बाहर नहीं जाता, इसलिए यह पूरी तरह सुरक्षित है।",
+    "bn": "না। সব প্রসেসিং আপনার ডিভাইসেই হয়। ডেটা কখনো ব্রাউজার থেকে বাইরে যায় না, তাই আপনার ডেটা একদম প্রাইভেট থাকে।",
+    "hinglish": "Nahi. Saari processing aapke device par hi hoti hai. Aapka data browser se bahar nahi jaata, isliye ye poori tarah secure hai.",
+    "banglish": "Na. Sob processing tomar device-ei hoy. Data kokhono browser theke baire jay na, tai tomar data ekdom private thake."
+  },
+  "faq_q4": {
+    "en": "Does it work on mobile and desktop?",
+    "hi": "क्या यह मोबाइल और डेस्कटॉप पर चलेगा?",
+    "bn": "এটা কি মোবাইল আর ডেস্কটপে কাজ করে?",
+    "hinglish": "Kya ye mobile aur desktop pe chalega?",
+    "banglish": "Eta ki mobile ar desktop-e kaj kore?"
+  },
+  "faq_a4": {
+    "en": "Yes. The site is fully responsive and works on phones, tablets, and computers without any app install.",
+    "hi": "जी हां, यह साइट फुली रिस्पॉन्सिव है। आप इसे बिना कोई ऐप इंस्टॉल किए फोन, टैबलेट या कंप्यूटर पर आराम से इस्तेमाल कर सकते हैं।",
+    "bn": "হ্যাঁ, এই সাইটটি ফুলি রেসপন্সিভ। কোনো অ্যাপ ইন্সটল ছাড়াই ফোন, ট্যাবলেট কিংবা কম্পিউটারে এটা আরামসে ইউজ করতে পারবেন।",
+    "hinglish": "Haan, ye site fully responsive hai. Aap ise bina koi app install kiye phone, tablet ya computer par aaram se use kar sakte hain.",
+    "banglish": "Ha, ei site-ti fully responsive. Kono app install chhara i phone, tablet ba computer-e eta aram-se use korte parben."
+  },
+  "footer_tagline": {
+    "en": "Free, lightweight tools that load instantly — built for the daily grind.",
+    "hi": "फ़्री और हल्के टूल्स जो तुरंत लोड होते हैं — रोज़ के कामों के लिए।",
+    "bn": "ফ্রি আর হালকা টুলস যা ইনস্ট্যান্টলি লোড হয় — প্রতিদিনের কাজের জন্য।",
+    "hinglish": "Free aur lightweight tools jo turant load hote hain — roz ke kaamon ke liye.",
+    "banglish": "Free ar lightweight tools ja instant-i load hoy — protidiner kajer jonno."
+  },
+  "footer_tools_heading": {
+    "en": "Tools",
+    "hi": "टूल्स",
+    "bn": "টুলস",
+    "hinglish": "Tools",
+    "banglish": "Tools"
+  },
+  "footer_categories_heading": {
+    "en": "Categories",
+    "hi": "कैटेगरी",
+    "bn": "ক্যাটাগরি",
+    "hinglish": "Categories",
+    "banglish": "Categories"
+  },
+  "footer_about_heading": {
+    "en": "About",
+    "hi": "हमारे बारे में",
+    "bn": "আমাদের সম্পর্কে",
+    "hinglish": "About Us",
+    "banglish": "Amader shomporke"
+  },
+  "footer_cat_students": {
+    "en": "Students",
+    "hi": "स्टूडेंट्स",
+    "bn": "স্টুডেন্ট",
+    "hinglish": "Students",
+    "banglish": "Students"
+  },
+  "footer_cat_developers": {
+    "en": "Developers",
+    "hi": "डेवलपर्स",
+    "bn": "ডেভেলপার",
+    "hinglish": "Developers",
+    "banglish": "Developers"
+  },
+  "footer_cat_everyday": {
+    "en": "Everyday",
+    "hi": "रोज़मर्रा",
+    "bn": "দৈনন্দিন",
+    "hinglish": "Everyday",
+    "banglish": "Everyday"
+  },
+  "footer_home": {
+    "en": "Home",
+    "hi": "होम",
+    "bn": "হোম",
+    "hinglish": "Home",
+    "banglish": "Home"
+  },
+  "footer_featured": {
+    "en": "Featured",
+    "hi": "फ़ीचर्ड",
+    "bn": "ফিচার্ড",
+    "hinglish": "Featured",
+    "banglish": "Featured"
+  },
+  "footer_all_tools": {
+    "en": "All tools",
+    "hi": "सभी टूल्स",
+    "bn": "সব টুলস",
+    "hinglish": "All tools",
+    "banglish": "Shob tools"
+  },
+  "copyright_text": {
+    "en": "Daily Tools. Built vanilla — no frameworks.",
+    "hi": "Daily Tools. वैनिला कोड, बिना किसी फ्रेमवर्क के।",
+    "bn": "Daily Tools. ভ্যানিলা কোডে তৈরি — নো ফ্রেমওয়ার্ক।",
+    "hinglish": "Daily Tools. Vanilla code, bina kisi framework ke.",
+    "banglish": "Daily Tools. Vanilla code-e toiri — no framework."
+  },
+  "banner_prompt": {
+    "en": "Want to translate this page?",
+    "hi": "क्या आप इस पेज को ट्रांसलेट करना चाहते हैं?",
+    "bn": "আপনি কি এই পেজটি ট্রান্সলেট করতে চান?",
+    "hinglish": "Kya aap is page ko translate karna chahte hain?",
+    "banglish": "Apni ki ei page-ti translate korte chan?"
+  },
+  "banner_close_aria": {
+    "en": "Close",
+    "hi": "बंद करें",
+    "bn": "বন্ধ করুন",
+    "hinglish": "Close",
+    "banglish": "Bondho koro"
+  }
+}

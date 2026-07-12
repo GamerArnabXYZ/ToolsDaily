@@ -17,6 +17,10 @@
   <meta name="keywords" content="free online tools, developer tools, student tools, browser tools, JSON formatter, word counter, unit converter, password generator, no sign up" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdailyonline.netlify.app/" />
+  <link rel="alternate" hreflang="en" href="https://toolsdailyonline.netlify.app/" />
+  <link rel="alternate" hreflang="hi" href="https://toolsdailyonline.netlify.app/?lang=hi" />
+  <link rel="alternate" hreflang="bn" href="https://toolsdailyonline.netlify.app/?lang=bn" />
+  <link rel="alternate" hreflang="x-default" href="https://toolsdailyonline.netlify.app/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -47,11 +51,11 @@
           <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
         </svg>
         <label class="sr-only" for="site-search">Search tools</label>
-        <input id="site-search" type="search" placeholder="Search tools…" autocomplete="off" aria-label="Search tools" />
-      <button type="button" class="search__submit" data-search-submit aria-label="Search">Search</button>
+        <input id="site-search" type="search" placeholder="Search tools…" data-i18n-placeholder="search_placeholder" autocomplete="off" aria-label="Search tools" />
+      <button type="button" class="search__submit" data-search-submit aria-label="Search" data-i18n="search_button">Search</button>
       </div>
 
-      <a class="btn btn--primary" href="#tools" style="height:36px;padding:0 16px;font-size:14px;">Browse all</a>
+      <a class="btn btn--primary" href="#tools" style="height:44px;padding:0 16px;font-size:14px;" data-i18n="browse_all_btn">Browse all</a>
     </div>
   </header>
 
@@ -60,18 +64,18 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__mesh" aria-hidden="true"></div>
       <div class="hero__inner">
-        <p class="eyebrow">Free · No sign-up · Instant</p>
-        <h1 id="hero-title" class="display-xl">Everyday tools, ready in a click.</h1>
-        <p class="body-lg">A small, fast collection of utilities for students and developers. No tracking, no clutter — just the tool you need, when you need it.</p>
+        <p class="eyebrow" data-i18n="eyebrow_free">Free · No sign-up · Instant</p>
+        <h1 id="hero-title" class="display-xl" data-i18n="hero_title">Everyday tools, ready in a click.</h1>
+        <p class="body-lg" data-i18n="hero_subtitle">A small, fast collection of utilities for students and developers. No tracking, no clutter — just the tool you need, when you need it.</p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#tools">Start now</a>
-          <a class="btn btn--secondary" href="#featured">See featured</a>
+          <a class="btn btn--primary" href="#tools" data-i18n="btn_start_now">Start now</a>
+          <a class="btn btn--secondary" href="#featured" data-i18n="btn_see_featured">See featured</a>
         </div>
         <div class="hero__links">
-          <a href="about-us.html">About Us</a>
-          <a href="contact-us.html">Contact Us</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          <a href="about-us.html" data-i18n="nav_about">About Us</a>
+          <a href="contact-us.html" data-i18n="nav_contact">Contact Us</a>
+          <a href="privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a>
+          <a href="terms-conditions.html" data-i18n="nav_terms">Terms &amp; Conditions</a>
         </div>
       </div>
     </section>
@@ -80,34 +84,34 @@
     <section class="section section--soft" id="featured" aria-labelledby="featured-title">
       <div class="container">
         <div class="section__head">
-          <p class="eyebrow">Featured</p>
-          <h2 id="featured-title" class="display-lg">Most-used tools today.</h2>
-          <p>Reach for these first — they cover the daily grind for most visitors.</p>
+          <p class="eyebrow" data-i18n="featured_eyebrow">Featured</p>
+          <h2 id="featured-title" class="display-lg" data-i18n="featured_title">Most-used tools today.</h2>
+          <p data-i18n="featured_subtitle">Reach for these first — they cover the daily grind for most visitors.</p>
         </div>
 
         <div class="card-grid">
           <a class="card" href="tools/word-counter.html">
             <span class="card__icon mono" aria-hidden="true">W</span>
-            <span class="card__title">Word Counter</span>
-            <p class="card__desc">Count words, characters, sentences and reading time.</p>
+            <span class="card__title" data-i18n="card_word_counter_title">Word Counter</span>
+            <p class="card__desc" data-i18n="card_word_counter_desc">Count words, characters, sentences and reading time.</p>
             <span class="card__meta">students / tool</span>
           </a>
           <a class="card" href="tools/json-formatter.html">
             <span class="card__icon mono" aria-hidden="true">{}</span>
-            <span class="card__title">JSON Formatter</span>
-            <p class="card__desc">Pretty-print, validate and minify JSON instantly.</p>
+            <span class="card__title" data-i18n="card_json_title">JSON Formatter</span>
+            <p class="card__desc" data-i18n="card_json_desc">Pretty-print, validate and minify JSON instantly.</p>
             <span class="card__meta">developers / tool</span>
           </a>
           <a class="card" href="tools/password.html">
             <span class="card__icon mono" aria-hidden="true">🔑</span>
-            <span class="card__title">Password Generator</span>
-            <p class="card__desc">Strong, copy-ready random passwords in a tap.</p>
+            <span class="card__title" data-i18n="card_password_title">Password Generator</span>
+            <p class="card__desc" data-i18n="card_password_desc">Strong, copy-ready random passwords in a tap.</p>
             <span class="card__meta">everyday / tool</span>
           </a>
           <a class="card" href="tools/unit.html">
             <span class="card__icon mono" aria-hidden="true">⇄</span>
-            <span class="card__title">Unit Converter</span>
-            <p class="card__desc">Length, mass, temperature and more, converted live.</p>
+            <span class="card__title" data-i18n="card_unit_title">Unit Converter</span>
+            <p class="card__desc" data-i18n="card_unit_desc">Length, mass, temperature and more, converted live.</p>
             <span class="card__meta">students / tool</span>
           </a>
         </div>
@@ -118,35 +122,35 @@
     <section class="section" id="tools" aria-labelledby="tools-title">
       <div class="container">
         <div class="section__head">
-          <p class="eyebrow">All tools</p>
-          <h2 id="tools-title" class="display-lg">Browse the full toolkit.</h2>
-          <p>Filter by who you are, or just type what you need.</p>
+          <p class="eyebrow" data-i18n="alltools_eyebrow">All tools</p>
+          <h2 id="tools-title" class="display-lg" data-i18n="alltools_title">Browse the full toolkit.</h2>
+          <p data-i18n="alltools_subtitle">Filter by who you are, or just type what you need.</p>
         </div>
 
         <div class="filter-row" id="filter-row" role="group" aria-label="Filter by category"></div>
 
         <div class="card-grid" id="tools-grid"></div>
-        <p class="no-results">No tools match your search. Try a different word.</p>
+        <p class="no-results" data-i18n="no_results">No tools match your search. Try a different word.</p>
       </div>
     </section>
   
     <section class="faq" aria-labelledby="faq-heading">
-      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <h2 class="section-head" id="faq-heading" data-i18n="faq_heading">Frequently asked questions</h2>
       <details open>
-        <summary>What tools does Daily Tools offer?</summary>
-        <p>Daily Tools bundles practical everyday utilities in one place: developer tools (JSON formatter, Base64, hash generator, CSS minifier, image-to-Base64), a word counter, a unit converter, a color picker, and a password generator.</p>
+        <summary data-i18n="faq_q1">What tools does Daily Tools offer?</summary>
+        <p data-i18n="faq_a1">Daily Tools bundles practical everyday utilities in one place: developer tools (JSON formatter, Base64, hash generator, CSS minifier, image-to-Base64), a word counter, a unit converter, a color picker, and a password generator.</p>
       </details>
       <details>
-        <summary>Do I need to create an account?</summary>
-        <p>No. Every tool runs entirely in your browser and is free to use with no registration, login, or sign-up required.</p>
+        <summary data-i18n="faq_q2">Do I need to create an account?</summary>
+        <p data-i18n="faq_a2">No. Every tool runs entirely in your browser and is free to use with no registration, login, or sign-up required.</p>
       </details>
       <details>
-        <summary>Is my data uploaded to a server?</summary>
-        <p>No. All processing happens locally on your device. Text, files, and inputs never leave your browser, so your data stays private.</p>
+        <summary data-i18n="faq_q3">Is my data uploaded to a server?</summary>
+        <p data-i18n="faq_a3">No. All processing happens locally on your device. Text, files, and inputs never leave your browser, so your data stays private.</p>
       </details>
       <details>
-        <summary>Does it work on mobile and desktop?</summary>
-        <p>Yes. The site is fully responsive and works on phones, tablets, and computers without any app install.</p>
+        <summary data-i18n="faq_q4">Does it work on mobile and desktop?</summary>
+        <p data-i18n="faq_a4">Yes. The site is fully responsive and works on phones, tablets, and computers without any app install.</p>
       </details>
     </section>
   </main>
@@ -160,42 +164,41 @@
             <span class="brand__mark" aria-hidden="true">D</span>
             <span>Daily<span class="brand__sub">Tools</span></span>
           </a>
-          <p style="margin-top:16px;max-width:280px;">Free, lightweight tools that load instantly — built for the daily grind.</p>
+          <p style="margin-top:16px;max-width:280px;" data-i18n="footer_tagline">Free, lightweight tools that load instantly — built for the daily grind.</p>
         </div>
         <div>
-          <h3>Tools</h3>
+          <h3 data-i18n="footer_tools_heading">Tools</h3>
           <ul>
-            <li><a href="tools/word-counter.html">Word Counter</a></li>
-            <li><a href="tools/json-formatter.html">JSON Formatter</a></li>
-            <li><a href="tools/unit.html">Unit Converter</a></li>
-            <li><a href="tools/password.html">Password Generator</a></li>
+            <li><a href="tools/word-counter.html" data-i18n="card_word_counter_title">Word Counter</a></li>
+            <li><a href="tools/json-formatter.html" data-i18n="card_json_title">JSON Formatter</a></li>
+            <li><a href="tools/unit.html" data-i18n="card_unit_title">Unit Converter</a></li>
+            <li><a href="tools/password.html" data-i18n="card_password_title">Password Generator</a></li>
           </ul>
         </div>
         <div>
-          <h3>Categories</h3>
+          <h3 data-i18n="footer_categories_heading">Categories</h3>
           <ul>
-            <li><a href="#tools">Students</a></li>
-            <li><a href="#tools">Teachers</a></li>
-            <li><a href="#tools">Developers</a></li>
-            <li><a href="#tools">Everyday</a></li>
+            <li><a href="#tools" data-i18n="footer_cat_students">Students</a></li>
+            <li><a href="#tools" data-i18n="footer_cat_developers">Developers</a></li>
+            <li><a href="#tools" data-i18n="footer_cat_everyday">Everyday</a></li>
           </ul>
         </div>
         <div>
-          <h3>About</h3>
+          <h3 data-i18n="footer_about_heading">About</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/#featured">Featured</a></li>
-            <li><a href="/#tools">All tools</a></li>
-<li><a href="about-us.html">About Us</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/" data-i18n="footer_home">Home</a></li>
+            <li><a href="/#featured" data-i18n="footer_featured">Featured</a></li>
+            <li><a href="/#tools" data-i18n="footer_all_tools">All tools</a></li>
+<li><a href="about-us.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="contact-us.html" data-i18n="nav_contact">Contact Us</a></li>
+            <li><a href="privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" data-i18n="nav_terms">Terms &amp; Conditions</a></li>
           </ul>
         </div>
       </div>
       <div class="site-footer__bottom">
-        <span>© <span id="year"></span> Daily Tools. Built vanilla — no frameworks.</span>
-        <span class="footer-legal"><a href="about-us.html">About</a> · <a href="contact-us.html">Contact</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-conditions.html">Terms</a></span>
+        <span>© <span id="year"></span> <span data-i18n="copyright_text">Daily Tools. Built vanilla — no frameworks.</span></span>
+        <span class="footer-legal"><a href="about-us.html" data-i18n="nav_about">About</a> · <a href="contact-us.html" data-i18n="nav_contact">Contact</a> · <a href="privacy-policy.html" data-i18n="nav_privacy">Privacy</a> · <a href="terms-conditions.html" data-i18n="nav_terms">Terms</a></span>
       </div>
     </div>
   </footer>
@@ -204,6 +207,7 @@
   <script src="./js/tools-data.js" defer></script>
   <script src="./js/header-search.js" defer></script>
   <script src="./js/main.js" defer></script>
+  <script src="./js/i18n.js" defer></script>
   <script type="application/ld+json" id="faq-schema">
 {
   "@context": "https://schema.org",
