@@ -335,6 +335,13 @@
     "hinglish": "Kya aap is page ko translate karna chahte hain?",
     "banglish": "Apni ki ei page-ti translate korte chan?"
   },
+  "back_all_tools": {
+    "en": "All tools",
+    "hi": "सभी टूल्स",
+    "bn": "সব টুলস",
+    "hinglish": "All tools",
+    "banglish": "Shob tools"
+  },
   "banner_close_aria": {
     "en": "Close",
     "hi": "बंद करें",

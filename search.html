@@ -15,6 +15,10 @@
   <meta name="description" content="Search all Daily Tools: JSON formatter, word counter, unit converter and more." />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://toolsdailyonline.netlify.app/search.html" />
+  <link rel="alternate" hreflang="en" href="https://toolsdailyonline.netlify.app/search.html" />
+  <link rel="alternate" hreflang="hi" href="https://toolsdailyonline.netlify.app/search.html?lang=hi" />
+  <link rel="alternate" hreflang="bn" href="https://toolsdailyonline.netlify.app/search.html?lang=bn" />
+  <link rel="alternate" hreflang="x-default" href="https://toolsdailyonline.netlify.app/search.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" />
@@ -32,9 +36,9 @@
           <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
         </svg>
         <input id="site-search" type="search" placeholder="Search tools…" autocomplete="off" aria-label="Search tools" />
-      <button type="button" class="search__submit" data-search-submit aria-label="Search">Search</button>
+      <button type="button" class="search__submit" data-search-submit aria-label="Search" data-i18n="search_button">Search</button>
       </div>
-      <a class="btn btn--primary" href="/" style="height:36px;padding:0 16px;font-size:14px;">Home</a>
+      <a class="btn btn--primary" href="/" style="height:44px;padding:0 16px;font-size:14px;" data-i18n="footer_home">Home</a>
     </div>
   </header>
 
@@ -61,21 +65,22 @@
             <span class="brand__mark" aria-hidden="true">D</span>
             <span>Daily<span class="brand__sub">Tools</span></span>
           </a>
-          <p style="margin-top:16px;max-width:280px;">Free, lightweight tools that load instantly — built for the daily grind.</p>
+          <p style="margin-top:16px;max-width:280px;" data-i18n="footer_tagline">Free, lightweight tools that load instantly — built for the daily grind.</p>
         </div>
-        <div><h3>Tools</h3><ul><li><a href="tools/word-counter.html">Word Counter</a></li><li><a href="tools/json-formatter.html">JSON Formatter</a></li><li><a href="tools/unit.html">Unit Converter</a></li><li><a href="tools/password.html">Password Generator</a></li></ul></div>
-        <div><h3>Categories</h3><ul><li><a href="/#tools">Students</a></li><li><a href="/#tools">Teachers</a></li><li><a href="/#tools">Developers</a></li><li><a href="/#tools">Everyday</a></li></ul></div>
-        <div><h3>About</h3><ul><li><a href="/">Home</a></li><li><a href="/#featured">Featured</a></li><li><a href="/#tools">All tools</a></li><li><a href="about-us.html">About Us</a></li><li><a href="contact-us.html">Contact Us</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms &amp; Conditions</a></li></ul></div>
+        <div><h3 data-i18n="footer_tools_heading">Tools</h3><ul><li><a href="tools/word-counter.html" data-i18n="card_word_counter_title">Word Counter</a></li><li><a href="tools/json-formatter.html" data-i18n="card_json_title">JSON Formatter</a></li><li><a href="tools/unit.html" data-i18n="card_unit_title">Unit Converter</a></li><li><a href="tools/password.html" data-i18n="card_password_title">Password Generator</a></li></ul></div>
+        <div><h3 data-i18n="footer_categories_heading">Categories</h3><ul><li><a href="/#tools" data-i18n="footer_cat_students">Students</a></li><li><a href="/#tools" data-i18n="footer_cat_developers">Developers</a></li><li><a href="/#tools" data-i18n="footer_cat_everyday">Everyday</a></li></ul></div>
+        <div><h3>About</h3><ul><li><a href="/" data-i18n="footer_home">Home</a></li><li><a href="/#featured">Featured</a></li><li><a href="/#tools">All tools</a></li><li><a href="about-us.html" data-i18n="nav_about">About Us</a></li><li><a href="contact-us.html">Contact Us</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms &amp; Conditions</a></li></ul></div>
       </div>
       <div class="site-footer__bottom">
-        <span>© <span class="year"></span> Daily Tools. Built vanilla — no frameworks.</span>
-        <span class="footer-legal"><a href="about-us.html">About</a> · <a href="contact-us.html">Contact</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-conditions.html">Terms</a></span>
+        <span>© <span class="year"></span> <span data-i18n="copyright_text">Daily Tools. Built vanilla — no frameworks.</span></span>
+        <span class="footer-legal"><a href="about-us.html" data-i18n="nav_about">About</a> · <a href="contact-us.html" data-i18n="nav_contact">Contact</a> · <a href="privacy-policy.html" data-i18n="nav_privacy">Privacy</a> · <a href="terms-conditions.html" data-i18n="nav_terms">Terms</a></span>
       </div>
     </div>
   </footer>
 
   <script src="js/tools-data.js" defer></script>
   <script src="js/header-search.js" defer></script>
+  <script src="js/i18n.js" defer></script>
   <script src="js/search.js" defer></script>
 </body>
 </html>
