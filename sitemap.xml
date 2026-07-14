@@ -14,6 +14,10 @@
   <url><loc>https://toolsdailyonline.netlify.app/tools/lorem-ipsum.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://toolsdailyonline.netlify.app/tools/age-calculator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://toolsdailyonline.netlify.app/tools/quiz-maker.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://toolsdailyonline.netlify.app/tools/regex-tester.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://toolsdailyonline.netlify.app/tools/image-compressor.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://toolsdailyonline.netlify.app/tools/favicon-generator.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://toolsdailyonline.netlify.app/tools/qr-code-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://toolsdailyonline.netlify.app/about-us.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://toolsdailyonline.netlify.app/contact-us.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://toolsdailyonline.netlify.app/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NNWKV19PQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5NNWKV19PQ');
+  </script>
+  <title>QR Code Generator — Free, Instant, No Watermark | Daily Tools</title>
+  <meta name="description" content="Turn any text, URL, or Wi-Fi info into a scannable QR code instantly. Download as PNG — free, private, no signup, no watermark, runs in your browser." />
+  <meta name="keywords" content="qr code generator, free qr code, create qr code, qr code maker, qr code online" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://toolsdailyonline.netlify.app/tools/qr-code-generator.html" />
+  <link rel="alternate" hreflang="en" href="https://toolsdailyonline.netlify.app/tools/qr-code-generator.html" />
+  <link rel="alternate" hreflang="hi" href="https://toolsdailyonline.netlify.app/tools/qr-code-generator.html?lang=hi" />
+  <link rel="alternate" hreflang="bn" href="https://toolsdailyonline.netlify.app/tools/qr-code-generator.html?lang=bn" />
+  <link rel="alternate" hreflang="x-default" href="https://toolsdailyonline.netlify.app/tools/qr-code-generator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolsdailyonline.netlify.app/tools/qr-code-generator.html" />
+  <meta property="og:title" content="QR Code Generator — Free, Instant, No Watermark | Daily Tools" />
+  <meta property="og:description" content="Turn any text, URL, or Wi-Fi info into a scannable QR code instantly. Download as PNG — free, private, no signup, no watermark, runs in your browser." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="QR Code Generator — Free, Instant, No Watermark | Daily Tools" />
+  <meta name="twitter:description" content="Turn any text, URL, or Wi-Fi info into a scannable QR code instantly. Download as PNG — free, private, no signup, no watermark, runs in your browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    #qrCanvas { display: block; margin: 0 auto; max-width: 100%; height: auto; image-rendering: pixelated; border: 1px solid var(--hairline); border-radius: var(--r-sm); background: #fff; }
+    .qr-wrap { text-align: center; }
+    .char-count { font-size: 12px; color: var(--mute); text-align: right; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Daily Tools home">
+        <span class="brand__mark" aria-hidden="true">D</span>
+        <span>Daily<span class="brand__sub">Tools</span></span>
+      </a>
+      <div class="search" role="search">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input id="site-search" type="search" placeholder="Search tools…" data-i18n-placeholder="search_placeholder" autocomplete="off" aria-label="Search tools" />
+      <button type="button" class="search__submit" data-search-submit aria-label="Search" data-i18n="search_button">Search</button>
+      </div>
+      <a class="btn btn--primary" href="/" style="height:44px;padding:0 16px;font-size:14px;" data-i18n="footer_home">Home</a>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <div class="back-row">
+      <a class="back-link" href="/#tools">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+        <span data-i18n="back_all_tools">All tools</span>
+      </a>
+    </div>
+
+    <section class="tool-head" aria-labelledby="tool-title">
+      <p class="eyebrow" data-i18n="footer_cat_everyday">Everyday</p>
+      <h1 id="tool-title" class="display-md">QR Code Generator</h1>
+      <p>Turn any text, URL, or Wi-Fi details into a scannable QR code. Everything runs locally — nothing is uploaded.</p>
+    </section>
+
+    <section class="tool-grid" aria-label="QR code generator">
+      <div class="panel">
+        <span class="panel__label">Text or URL</span>
+        <textarea id="qrInput" class="text-input" style="min-height:100px;" placeholder="Type a URL, message, or Wi-Fi string…" spellcheck="false"></textarea>
+        <div class="char-count"><span id="charCount">0</span> / ~210 characters</div>
+        <div id="qrError" style="color:#dc2626;font-size:13px;margin-top:6px;min-height:18px;"></div>
+      </div>
+
+      <div class="panel">
+        <span class="panel__label">Your QR code</span>
+        <div class="qr-wrap">
+          <canvas id="qrCanvas" width="252" height="252"></canvas>
+        </div>
+        <a id="downloadQr" class="btn btn--primary" style="height:44px;margin-top:16px;width:100%;display:flex;align-items:center;justify-content:center;" download="qr-code.png">Download PNG</a>
+      </div>
+    </section>
+
+    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>Is there a limit to how much text I can encode?</summary>
+        <p>Yes — roughly 210 characters for plain text/URLs. Longer text needs a bigger, denser QR code, and beyond that limit the tool will show an error.</p>
+      </details>
+      <details>
+        <summary>Can I make a QR code for Wi-Fi login?</summary>
+        <p>Yes. Use the format <code>WIFI:T:WPA;S:YourNetworkName;P:YourPassword;;</code> and most phone cameras will offer to join the network when scanned.</p>
+      </details>
+      <details>
+        <summary>Does the QR code expire or stop working?</summary>
+        <p>No. The QR code is a static image encoding your exact text — it works forever and isn't tied to any account or server.</p>
+      </details>
+      <details>
+        <summary>Is my data uploaded anywhere?</summary>
+        <p>No. The QR code is generated entirely in your browser using JavaScript — your text never leaves your device.</p>
+      </details>
+      <details>
+        <summary>Will it scan correctly on any phone?</summary>
+        <p>Yes. It follows the standard QR code specification, so any modern phone camera or QR scanner app can read it.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="/" aria-label="Daily Tools home">
+            <span class="brand__mark" aria-hidden="true">D</span>
+            <span>Daily<span class="brand__sub">Tools</span></span>
+          </a>
+          <p style="margin-top:16px;max-width:280px;" data-i18n="footer_tagline">Free, lightweight tools that load instantly — built for the daily grind.</p>
+        </div>
+        <div>
+          <h3 data-i18n="footer_tools_heading">Tools</h3>
+          <ul>
+            <li><a href="word-counter.html" data-i18n="card_word_counter_title">Word Counter</a></li>
+            <li><a href="json-formatter.html" data-i18n="card_json_title">JSON Formatter</a></li>
+            <li><a href="unit.html" data-i18n="card_unit_title">Unit Converter</a></li>
+            <li><a href="password.html" data-i18n="card_password_title">Password Generator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_categories_heading">Categories</h3>
+          <ul>
+            <li><a href="/#tools" data-i18n="footer_cat_students">Students</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_developers">Developers</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_everyday">Everyday</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_about_heading">About</h3>
+          <ul>
+            <li><a href="/" data-i18n="footer_home">Home</a></li>
+            <li><a href="/#featured" data-i18n="footer_featured">Featured</a></li>
+            <li><a href="/#tools" data-i18n="footer_all_tools">All tools</a></li>
+<li><a href="/about-us.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="/contact-us.html" data-i18n="nav_contact">Contact Us</a></li>
+            <li><a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+            <li><a href="/terms-conditions.html" data-i18n="nav_terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span class="year"></span> <span data-i18n="copyright_text">Daily Tools. Built vanilla — no frameworks.</span></span>
+        <span class="footer-legal"><a href="/about-us.html" data-i18n="nav_about">About</a> · <a href="/contact-us.html" data-i18n="nav_contact">Contact</a> · <a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy</a> · <a href="/terms-conditions.html" data-i18n="nav_terms">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
+  <script src="../js/tools-data.js" defer></script>
+  <script src="../js/header-search.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/tool-utils.js" defer></script>
+  <script src="../js/qr-encoder.js" defer></script>
+  <script src="../js/qr-code-generator.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is there a limit to how much text I can encode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — roughly 210 characters for plain text/URLs. Longer text needs a bigger, denser QR code, and beyond that limit the tool will show an error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I make a QR code for Wi-Fi login?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use the format WIFI:T:WPA;S:YourNetworkName;P:YourPassword;; and most phone cameras will offer to join the network when scanned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the QR code expire or stop working?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The QR code is a static image encoding your exact text — it works forever and isn't tied to any account or server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The QR code is generated entirely in your browser using JavaScript — your text never leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will it scan correctly on any phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It follows the standard QR code specification, so any modern phone camera or QR scanner app can read it."
+      }
+    }
+  ]
+}
+  </script>
+</body>
+</html>

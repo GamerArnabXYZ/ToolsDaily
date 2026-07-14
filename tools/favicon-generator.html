@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NNWKV19PQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5NNWKV19PQ');
+  </script>
+  <title>Favicon Generator — All Sizes from One Image | Daily Tools</title>
+  <meta name="description" content="Upload one image and generate every favicon size for browsers, iOS, and Android instantly. Download PNGs and copy the HTML tags — free and private." />
+  <meta name="keywords" content="favicon generator, favicon maker, app icon generator, apple touch icon, favicon sizes" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://toolsdailyonline.netlify.app/tools/favicon-generator.html" />
+  <link rel="alternate" hreflang="en" href="https://toolsdailyonline.netlify.app/tools/favicon-generator.html" />
+  <link rel="alternate" hreflang="hi" href="https://toolsdailyonline.netlify.app/tools/favicon-generator.html?lang=hi" />
+  <link rel="alternate" hreflang="bn" href="https://toolsdailyonline.netlify.app/tools/favicon-generator.html?lang=bn" />
+  <link rel="alternate" hreflang="x-default" href="https://toolsdailyonline.netlify.app/tools/favicon-generator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolsdailyonline.netlify.app/tools/favicon-generator.html" />
+  <meta property="og:title" content="Favicon Generator — All Sizes from One Image | Daily Tools" />
+  <meta property="og:description" content="Upload one image and generate every favicon size for browsers, iOS, and Android instantly. Download PNGs and copy the HTML tags — free and private." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Favicon Generator — All Sizes from One Image | Daily Tools" />
+  <meta name="twitter:description" content="Upload one image and generate every favicon size for browsers, iOS, and Android instantly. Download PNGs and copy the HTML tags — free and private." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .drop-zone { border: 2px dashed var(--hairline-strong); border-radius: var(--r-md); padding: 32px 16px; text-align: center; cursor: pointer; }
+    .drop-zone:hover { border-color: var(--primary); }
+    .fav-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 14px; margin-top: 16px; }
+    .fav-item { border: 1px solid var(--hairline); border-radius: var(--r-sm); padding: 10px; text-align: center; }
+    .fav-item img { image-rendering: pixelated; background: repeating-conic-gradient(#eee 0% 25%, #fff 0% 50%) 50% / 12px 12px; border-radius: 4px; }
+    .fav-item a { display: block; margin-top: 8px; font-size: 12px; }
+    .snippet-box { background: var(--ink); color: #fff; border-radius: var(--r-sm); padding: 14px; font-family: var(--font-mono); font-size: 12.5px; white-space: pre-wrap; word-break: break-word; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Daily Tools home">
+        <span class="brand__mark" aria-hidden="true">D</span>
+        <span>Daily<span class="brand__sub">Tools</span></span>
+      </a>
+      <div class="search" role="search">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input id="site-search" type="search" placeholder="Search tools…" data-i18n-placeholder="search_placeholder" autocomplete="off" aria-label="Search tools" />
+      <button type="button" class="search__submit" data-search-submit aria-label="Search" data-i18n="search_button">Search</button>
+      </div>
+      <a class="btn btn--primary" href="/" style="height:44px;padding:0 16px;font-size:14px;" data-i18n="footer_home">Home</a>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <div class="back-row">
+      <a class="back-link" href="/#tools">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+        <span data-i18n="back_all_tools">All tools</span>
+      </a>
+    </div>
+
+    <section class="tool-head" aria-labelledby="tool-title">
+      <p class="eyebrow" data-i18n="footer_cat_developers">Developers</p>
+      <h1 id="tool-title" class="display-md">Favicon Generator</h1>
+      <p>Upload a square image to generate every favicon size you need. Nothing is uploaded to a server.</p>
+    </section>
+
+    <section class="tool-grid" aria-label="Favicon generator" style="grid-template-columns:1fr;">
+      <div class="panel">
+        <span class="panel__label">Source image</span>
+        <label class="drop-zone" for="fileInput">
+          <span id="dropText">Tap to choose an image (square works best, e.g. 512×512)</span>
+          <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp" style="display:none;" />
+        </label>
+      </div>
+
+      <div class="panel" id="resultsPanel" style="display:none;">
+        <span class="panel__label">Generated sizes — tap to download each</span>
+        <div class="fav-grid" id="favGrid"></div>
+
+        <span class="panel__label" style="margin-top:20px;display:block;">HTML to paste in your &lt;head&gt;</span>
+        <div class="snippet-box" id="snippet"></div>
+        <button class="btn-copy" type="button" data-copy="#snippetHidden">Copy HTML snippet</button>
+        <textarea id="snippetHidden" style="position:absolute;left:-9999px;"></textarea>
+      </div>
+    </section>
+
+    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What sizes are generated?</summary>
+        <p>16×16 and 32×32 for browser tabs, 180×180 for Apple touch icon, and 192×192 and 512×512 for Android home screen and PWA icons.</p>
+      </details>
+      <details>
+        <summary>Does my image need to be square?</summary>
+        <p>Square images work best since every size is a square. Non-square images will be stretched to fit — crop to a square first for best results.</p>
+      </details>
+      <details>
+        <summary>Why is there no .ico file?</summary>
+        <p>Modern browsers fully support PNG favicons, so a legacy .ico file isn't required. Just add the generated PNGs and the HTML snippet below.</p>
+      </details>
+      <details>
+        <summary>Is my image uploaded anywhere?</summary>
+        <p>No. All resizing happens locally in your browser using Canvas — the image never leaves your device.</p>
+      </details>
+      <details>
+        <summary>Where do I put the downloaded files?</summary>
+        <p>Place them in your website's root folder (or wherever you keep static assets) and paste the provided HTML snippet into your page's &lt;head&gt;.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="/" aria-label="Daily Tools home">
+            <span class="brand__mark" aria-hidden="true">D</span>
+            <span>Daily<span class="brand__sub">Tools</span></span>
+          </a>
+          <p style="margin-top:16px;max-width:280px;" data-i18n="footer_tagline">Free, lightweight tools that load instantly — built for the daily grind.</p>
+        </div>
+        <div>
+          <h3 data-i18n="footer_tools_heading">Tools</h3>
+          <ul>
+            <li><a href="word-counter.html" data-i18n="card_word_counter_title">Word Counter</a></li>
+            <li><a href="json-formatter.html" data-i18n="card_json_title">JSON Formatter</a></li>
+            <li><a href="unit.html" data-i18n="card_unit_title">Unit Converter</a></li>
+            <li><a href="password.html" data-i18n="card_password_title">Password Generator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_categories_heading">Categories</h3>
+          <ul>
+            <li><a href="/#tools" data-i18n="footer_cat_students">Students</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_developers">Developers</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_everyday">Everyday</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_about_heading">About</h3>
+          <ul>
+            <li><a href="/" data-i18n="footer_home">Home</a></li>
+            <li><a href="/#featured" data-i18n="footer_featured">Featured</a></li>
+            <li><a href="/#tools" data-i18n="footer_all_tools">All tools</a></li>
+<li><a href="/about-us.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="/contact-us.html" data-i18n="nav_contact">Contact Us</a></li>
+            <li><a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+            <li><a href="/terms-conditions.html" data-i18n="nav_terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span class="year"></span> <span data-i18n="copyright_text">Daily Tools. Built vanilla — no frameworks.</span></span>
+        <span class="footer-legal"><a href="/about-us.html" data-i18n="nav_about">About</a> · <a href="/contact-us.html" data-i18n="nav_contact">Contact</a> · <a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy</a> · <a href="/terms-conditions.html" data-i18n="nav_terms">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
+  <script src="../js/tools-data.js" defer></script>
+  <script src="../js/header-search.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/tool-utils.js" defer></script>
+  <script src="../js/favicon-generator.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What sizes are generated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "16x16 and 32x32 for browser tabs, 180x180 for Apple touch icon, and 192x192 and 512x512 for Android home screen and PWA icons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my image need to be square?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Square images work best since every size is a square. Non-square images will be stretched to fit — crop to a square first for best results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is there no .ico file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modern browsers fully support PNG favicons, so a legacy .ico file isn't required. Just add the generated PNGs and the HTML snippet below."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my image uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All resizing happens locally in your browser using Canvas — the image never leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do I put the downloaded files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Place them in your website's root folder (or wherever you keep static assets) and paste the provided HTML snippet into your page's <head>."
+      }
+    }
+  ]
+}
+  </script>
+</body>
+</html>

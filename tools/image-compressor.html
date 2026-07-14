@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NNWKV19PQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5NNWKV19PQ');
+  </script>
+  <title>Image Compressor — Shrink Photos in Your Browser | Daily Tools</title>
+  <meta name="description" content="Compress JPG, PNG, or WebP images right in your browser. Adjust quality, compare before/after size, and download instantly — free and fully private." />
+  <meta name="keywords" content="image compressor, compress image online, shrink photo size, reduce image size, jpg compressor" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://toolsdailyonline.netlify.app/tools/image-compressor.html" />
+  <link rel="alternate" hreflang="en" href="https://toolsdailyonline.netlify.app/tools/image-compressor.html" />
+  <link rel="alternate" hreflang="hi" href="https://toolsdailyonline.netlify.app/tools/image-compressor.html?lang=hi" />
+  <link rel="alternate" hreflang="bn" href="https://toolsdailyonline.netlify.app/tools/image-compressor.html?lang=bn" />
+  <link rel="alternate" hreflang="x-default" href="https://toolsdailyonline.netlify.app/tools/image-compressor.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolsdailyonline.netlify.app/tools/image-compressor.html" />
+  <meta property="og:title" content="Image Compressor — Shrink Photos in Your Browser | Daily Tools" />
+  <meta property="og:description" content="Compress JPG, PNG, or WebP images right in your browser. Adjust quality, compare before/after size, and download instantly — free and fully private." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Image Compressor — Shrink Photos in Your Browser | Daily Tools" />
+  <meta name="twitter:description" content="Compress JPG, PNG, or WebP images right in your browser. Adjust quality, compare before/after size, and download instantly — free and fully private." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .drop-zone { border: 2px dashed var(--hairline-strong); border-radius: var(--r-md); padding: 32px 16px; text-align: center; cursor: pointer; }
+    .drop-zone:hover { border-color: var(--primary); }
+    .img-preview { max-width: 100%; border-radius: var(--r-sm); display: block; margin-top: 12px; }
+    .size-compare { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px; }
+    .size-compare .stat { flex: 1 1 140px; }
+    .quality-row { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+    .quality-row input[type="range"] { flex: 1 1 auto; }
+    .quality-val { font-family: var(--font-mono); font-weight: 600; min-width: 48px; text-align: right; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Daily Tools home">
+        <span class="brand__mark" aria-hidden="true">D</span>
+        <span>Daily<span class="brand__sub">Tools</span></span>
+      </a>
+      <div class="search" role="search">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input id="site-search" type="search" placeholder="Search tools…" data-i18n-placeholder="search_placeholder" autocomplete="off" aria-label="Search tools" />
+      <button type="button" class="search__submit" data-search-submit aria-label="Search" data-i18n="search_button">Search</button>
+      </div>
+      <a class="btn btn--primary" href="/" style="height:44px;padding:0 16px;font-size:14px;" data-i18n="footer_home">Home</a>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <div class="back-row">
+      <a class="back-link" href="/#tools">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+        <span data-i18n="back_all_tools">All tools</span>
+      </a>
+    </div>
+
+    <section class="tool-head" aria-labelledby="tool-title">
+      <p class="eyebrow" data-i18n="footer_cat_everyday">Everyday</p>
+      <h1 id="tool-title" class="display-md">Image Compressor</h1>
+      <p>Shrink a photo's file size right in your browser. Nothing is uploaded to a server.</p>
+    </section>
+
+    <section class="tool-grid" aria-label="Image compressor">
+      <div class="panel">
+        <span class="panel__label">Original</span>
+        <label class="drop-zone" for="fileInput">
+          <span id="dropText">Tap to choose an image</span>
+          <input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp" style="display:none;" />
+        </label>
+        <img id="origPreview" class="img-preview" style="display:none;" alt="Original preview" />
+        <div class="quality-row">
+          <label for="quality" style="white-space:nowrap;">Quality</label>
+          <input id="quality" type="range" min="10" max="100" value="75" />
+          <span class="quality-val" id="qualityVal">75%</span>
+        </div>
+      </div>
+      <div class="panel">
+        <span class="panel__label">Compressed result</span>
+        <img id="outPreview" class="img-preview" style="display:none;" alt="Compressed preview" />
+        <div class="size-compare">
+          <div class="stat"><div class="stat__num" id="origSize">—</div><div class="stat__lbl">Original size</div></div>
+          <div class="stat"><div class="stat__num" id="newSize">—</div><div class="stat__lbl">New size</div></div>
+          <div class="stat"><div class="stat__num" id="savedPct">—</div><div class="stat__lbl">Saved</div></div>
+        </div>
+        <a id="downloadBtn" class="btn btn--primary" style="height:44px;margin-top:16px;display:none;align-items:center;justify-content:center;" download="compressed.jpg">Download compressed image</a>
+      </div>
+    </section>
+
+    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>Is my image uploaded to a server?</summary>
+        <p>No. Compression happens entirely on your device using your browser's built-in image tools — the file never leaves your phone or computer.</p>
+      </details>
+      <details>
+        <summary>What image formats are supported?</summary>
+        <p>JPG, PNG, and WebP images can be uploaded. The compressed output is saved as a JPG for the smallest reliable file size.</p>
+      </details>
+      <details>
+        <summary>What quality setting should I use?</summary>
+        <p>75–85% usually gives a good balance of quality and file size. Go lower (40–60%) for thumbnails or web previews where sharpness matters less.</p>
+      </details>
+      <details>
+        <summary>Will compressing reduce the image dimensions?</summary>
+        <p>No. Only the file size (via JPG quality) is reduced — width and height stay exactly the same as the original.</p>
+      </details>
+      <details>
+        <summary>Can I compress a PNG with transparency?</summary>
+        <p>The output format is JPG, which doesn't support transparency, so transparent areas will be filled with white in the compressed result.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="/" aria-label="Daily Tools home">
+            <span class="brand__mark" aria-hidden="true">D</span>
+            <span>Daily<span class="brand__sub">Tools</span></span>
+          </a>
+          <p style="margin-top:16px;max-width:280px;" data-i18n="footer_tagline">Free, lightweight tools that load instantly — built for the daily grind.</p>
+        </div>
+        <div>
+          <h3 data-i18n="footer_tools_heading">Tools</h3>
+          <ul>
+            <li><a href="word-counter.html" data-i18n="card_word_counter_title">Word Counter</a></li>
+            <li><a href="json-formatter.html" data-i18n="card_json_title">JSON Formatter</a></li>
+            <li><a href="unit.html" data-i18n="card_unit_title">Unit Converter</a></li>
+            <li><a href="password.html" data-i18n="card_password_title">Password Generator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_categories_heading">Categories</h3>
+          <ul>
+            <li><a href="/#tools" data-i18n="footer_cat_students">Students</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_developers">Developers</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_everyday">Everyday</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_about_heading">About</h3>
+          <ul>
+            <li><a href="/" data-i18n="footer_home">Home</a></li>
+            <li><a href="/#featured" data-i18n="footer_featured">Featured</a></li>
+            <li><a href="/#tools" data-i18n="footer_all_tools">All tools</a></li>
+<li><a href="/about-us.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="/contact-us.html" data-i18n="nav_contact">Contact Us</a></li>
+            <li><a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+            <li><a href="/terms-conditions.html" data-i18n="nav_terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span class="year"></span> <span data-i18n="copyright_text">Daily Tools. Built vanilla — no frameworks.</span></span>
+        <span class="footer-legal"><a href="/about-us.html" data-i18n="nav_about">About</a> · <a href="/contact-us.html" data-i18n="nav_contact">Contact</a> · <a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy</a> · <a href="/terms-conditions.html" data-i18n="nav_terms">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
+  <script src="../js/tools-data.js" defer></script>
+  <script src="../js/header-search.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/tool-utils.js" defer></script>
+  <script src="../js/image-compressor.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is my image uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Compression happens entirely on your device using your browser's built-in image tools — the file never leaves your phone or computer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JPG, PNG, and WebP images can be uploaded. The compressed output is saved as a JPG for the smallest reliable file size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What quality setting should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "75-85% usually gives a good balance of quality and file size. Go lower (40-60%) for thumbnails or web previews where sharpness matters less."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will compressing reduce the image dimensions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Only the file size (via JPG quality) is reduced — width and height stay exactly the same as the original."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I compress a PNG with transparency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The output format is JPG, which doesn't support transparency, so transparent areas will be filled with white in the compressed result."
+      }
+    }
+  ]
+}
+  </script>
+</body>
+</html>

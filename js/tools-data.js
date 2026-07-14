@@ -19,6 +19,10 @@ const TOOLS = [
   { name: "Lorem Ipsum Generator", desc: "Generate placeholder paragraphs, sentences or words.", category: "everyday", href: "tools/lorem-ipsum.html", icon: "¶" },
   { name: "Age Calculator", desc: "Find your exact age in years, months and days.", category: "everyday", href: "tools/age-calculator.html", icon: "🎂" },
   { name: "Quiz Maker", desc: "Build a multiple-choice quiz and share it with a link.", category: "students", href: "tools/quiz-maker.html", icon: "?" },
+  { name: "Regex Tester", desc: "Test regular expressions live with match highlighting.", category: "developers", href: "tools/regex-tester.html", icon: ".*" },
+  { name: "Image Compressor", desc: "Shrink photo file size right in your browser.", category: "everyday", href: "tools/image-compressor.html", icon: "▤" },
+  { name: "Favicon Generator", desc: "Create every favicon size from one image.", category: "developers", href: "tools/favicon-generator.html", icon: "◱" },
+  { name: "QR Code Generator", desc: "Turn text, URLs or Wi-Fi info into a QR code.", category: "everyday", href: "tools/qr-code-generator.html", icon: "▦" },
 ];
 
 const CATEGORIES = [

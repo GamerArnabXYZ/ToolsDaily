@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NNWKV19PQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5NNWKV19PQ');
+  </script>
+  <title>Regex Tester — Test Regular Expressions Live | Daily Tools</title>
+  <meta name="description" content="Test regular expressions against sample text with live match highlighting, groups, and flags. Free, instant, runs entirely in your browser — no signup." />
+  <meta name="keywords" content="regex tester, regular expression tester, regex tool, test regex online, regex match" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://toolsdailyonline.netlify.app/tools/regex-tester.html" />
+  <link rel="alternate" hreflang="en" href="https://toolsdailyonline.netlify.app/tools/regex-tester.html" />
+  <link rel="alternate" hreflang="hi" href="https://toolsdailyonline.netlify.app/tools/regex-tester.html?lang=hi" />
+  <link rel="alternate" hreflang="bn" href="https://toolsdailyonline.netlify.app/tools/regex-tester.html?lang=bn" />
+  <link rel="alternate" hreflang="x-default" href="https://toolsdailyonline.netlify.app/tools/regex-tester.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolsdailyonline.netlify.app/tools/regex-tester.html" />
+  <meta property="og:title" content="Regex Tester — Test Regular Expressions Live | Daily Tools" />
+  <meta property="og:description" content="Test regular expressions against sample text with live match highlighting, groups, and flags. Free, instant, runs entirely in your browser — no signup." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Regex Tester — Test Regular Expressions Live | Daily Tools" />
+  <meta name="twitter:description" content="Test regular expressions against sample text with live match highlighting, groups, and flags. Free, instant, runs entirely in your browser — no signup." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .regex-bar { display: flex; align-items: center; gap: 0; margin-bottom: 12px; font-family: var(--font-mono); }
+    .regex-slash { font-size: 20px; color: var(--mute); padding: 0 4px; }
+    .regex-pattern { flex: 1 1 auto; height: 44px; font-family: var(--font-mono); }
+    .regex-flags { width: 90px; height: 44px; font-family: var(--font-mono); }
+    .regex-error { color: #dc2626; font-size: 13px; margin-top: 6px; min-height: 18px; }
+    .regex-highlight { white-space: pre-wrap; word-break: break-word; border: 1px solid var(--hairline); border-radius: var(--r-md); padding: 14px; min-height: 140px; font-family: var(--font-mono); font-size: 14px; line-height: 1.6; }
+    .regex-highlight mark { background: #fde047; color: #1a1a1a; border-radius: 2px; padding: 0 1px; }
+    .regex-match-list { margin-top: 12px; font-family: var(--font-mono); font-size: 13px; max-height: 220px; overflow-y: auto; }
+    .regex-match-item { padding: 8px 0; border-bottom: 1px solid var(--hairline); }
+    .flags-help { font-size: 12px; color: var(--mute); margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Daily Tools home">
+        <span class="brand__mark" aria-hidden="true">D</span>
+        <span>Daily<span class="brand__sub">Tools</span></span>
+      </a>
+      <div class="search" role="search">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input id="site-search" type="search" placeholder="Search tools…" data-i18n-placeholder="search_placeholder" autocomplete="off" aria-label="Search tools" />
+      <button type="button" class="search__submit" data-search-submit aria-label="Search" data-i18n="search_button">Search</button>
+      </div>
+      <a class="btn btn--primary" href="/" style="height:44px;padding:0 16px;font-size:14px;" data-i18n="footer_home">Home</a>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <div class="back-row">
+      <a class="back-link" href="/#tools">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+        <span data-i18n="back_all_tools">All tools</span>
+      </a>
+    </div>
+
+    <section class="tool-head" aria-labelledby="tool-title">
+      <p class="eyebrow" data-i18n="footer_cat_developers">Developers</p>
+      <h1 id="tool-title" class="display-md">Regex Tester</h1>
+      <p>Test a regular expression against sample text with live match highlighting. Everything runs locally — nothing is uploaded.</p>
+    </section>
+
+    <section class="tool-grid" aria-label="Regex tester" style="grid-template-columns:1fr;">
+      <div class="panel">
+        <span class="panel__label">Pattern</span>
+        <div class="regex-bar">
+          <span class="regex-slash">/</span>
+          <input id="pattern" type="text" class="text-input regex-pattern" placeholder="e.g. \\d+" spellcheck="false" />
+          <span class="regex-slash">/</span>
+          <input id="flags" type="text" class="text-input regex-flags" placeholder="gim" spellcheck="false" maxlength="6" />
+        </div>
+        <p class="flags-help">Flags: g = global, i = case-insensitive, m = multiline, s = dot matches newline, u = unicode</p>
+        <div id="error" class="regex-error"></div>
+      </div>
+
+      <div class="panel">
+        <span class="panel__label">Test string</span>
+        <textarea id="testString" class="text-input" style="min-height:120px;" placeholder="Paste or type text to test against…" spellcheck="false"></textarea>
+      </div>
+
+      <div class="panel">
+        <span class="panel__label" id="matchCountLabel">Highlighted matches</span>
+        <div id="highlight" class="regex-highlight"></div>
+        <div id="matchList" class="regex-match-list"></div>
+      </div>
+    </section>
+
+    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What regex flavor does this use?</summary>
+        <p>This tool uses your browser's native JavaScript regular expression engine, the same one used in Node.js and modern web apps.</p>
+      </details>
+      <details>
+        <summary>What do the flags mean?</summary>
+        <p>g finds all matches instead of just the first, i ignores case, m makes ^ and $ match line starts/ends, s lets . match newlines, and u enables full unicode mode.</p>
+      </details>
+      <details>
+        <summary>Why does my pattern show an error?</summary>
+        <p>The error message shows exactly what JavaScript's regex engine rejected — usually an unescaped special character or unbalanced brackets/parentheses.</p>
+      </details>
+      <details>
+        <summary>Can I see capture groups from my matches?</summary>
+        <p>Yes. Each match in the list below the highlight shows its full match text plus any capture groups, in order.</p>
+      </details>
+      <details>
+        <summary>Is my text or pattern sent anywhere?</summary>
+        <p>No. Matching runs entirely in your browser using JavaScript's built-in RegExp — nothing is uploaded or stored.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="/" aria-label="Daily Tools home">
+            <span class="brand__mark" aria-hidden="true">D</span>
+            <span>Daily<span class="brand__sub">Tools</span></span>
+          </a>
+          <p style="margin-top:16px;max-width:280px;" data-i18n="footer_tagline">Free, lightweight tools that load instantly — built for the daily grind.</p>
+        </div>
+        <div>
+          <h3 data-i18n="footer_tools_heading">Tools</h3>
+          <ul>
+            <li><a href="word-counter.html" data-i18n="card_word_counter_title">Word Counter</a></li>
+            <li><a href="json-formatter.html" data-i18n="card_json_title">JSON Formatter</a></li>
+            <li><a href="unit.html" data-i18n="card_unit_title">Unit Converter</a></li>
+            <li><a href="password.html" data-i18n="card_password_title">Password Generator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_categories_heading">Categories</h3>
+          <ul>
+            <li><a href="/#tools" data-i18n="footer_cat_students">Students</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_developers">Developers</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_everyday">Everyday</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_about_heading">About</h3>
+          <ul>
+            <li><a href="/" data-i18n="footer_home">Home</a></li>
+            <li><a href="/#featured" data-i18n="footer_featured">Featured</a></li>
+            <li><a href="/#tools" data-i18n="footer_all_tools">All tools</a></li>
+<li><a href="/about-us.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="/contact-us.html" data-i18n="nav_contact">Contact Us</a></li>
+            <li><a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+            <li><a href="/terms-conditions.html" data-i18n="nav_terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span class="year"></span> <span data-i18n="copyright_text">Daily Tools. Built vanilla — no frameworks.</span></span>
+        <span class="footer-legal"><a href="/about-us.html" data-i18n="nav_about">About</a> · <a href="/contact-us.html" data-i18n="nav_contact">Contact</a> · <a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy</a> · <a href="/terms-conditions.html" data-i18n="nav_terms">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
+  <script src="../js/tools-data.js" defer></script>
+  <script src="../js/header-search.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/tool-utils.js" defer></script>
+  <script src="../js/regex-tester.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What regex flavor does this use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool uses your browser's native JavaScript regular expression engine, the same one used in Node.js and modern web apps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the flags mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "g finds all matches instead of just the first, i ignores case, m makes ^ and $ match line starts/ends, s lets . match newlines, and u enables full unicode mode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my pattern show an error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The error message shows exactly what JavaScript's regex engine rejected — usually an unescaped special character or unbalanced brackets/parentheses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see capture groups from my matches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each match in the list below the highlight shows its full match text plus any capture groups, in order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text or pattern sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Matching runs entirely in your browser using JavaScript's built-in RegExp — nothing is uploaded or stored."
+      }
+    }
+  ]
+}
+  </script>
+</body>
+</html>
