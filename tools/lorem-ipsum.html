@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NNWKV19PQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5NNWKV19PQ');
+  </script>
+  <title>Lorem Ipsum Generator — Free Placeholder Text | Daily Tools</title>
+  <meta name="description" content="Generate paragraphs, sentences, or words of classic Lorem Ipsum placeholder text instantly. Copy-ready output, free, no signup, runs in your browser." />
+  <meta name="keywords" content="lorem ipsum, lorem ipsum generator, placeholder text, dummy text, filler text" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://toolsdailyonline.netlify.app/tools/lorem-ipsum.html" />
+  <link rel="alternate" hreflang="en" href="https://toolsdailyonline.netlify.app/tools/lorem-ipsum.html" />
+  <link rel="alternate" hreflang="hi" href="https://toolsdailyonline.netlify.app/tools/lorem-ipsum.html?lang=hi" />
+  <link rel="alternate" hreflang="bn" href="https://toolsdailyonline.netlify.app/tools/lorem-ipsum.html?lang=bn" />
+  <link rel="alternate" hreflang="x-default" href="https://toolsdailyonline.netlify.app/tools/lorem-ipsum.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolsdailyonline.netlify.app/tools/lorem-ipsum.html" />
+  <meta property="og:title" content="Lorem Ipsum Generator — Free Placeholder Text | Daily Tools" />
+  <meta property="og:description" content="Generate paragraphs, sentences, or words of classic Lorem Ipsum placeholder text instantly. Copy-ready output, free, no signup, runs in your browser." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lorem Ipsum Generator — Free Placeholder Text | Daily Tools" />
+  <meta name="twitter:description" content="Generate paragraphs, sentences, or words of classic Lorem Ipsum placeholder text instantly. Copy-ready output, free, no signup, runs in your browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Daily Tools home">
+        <span class="brand__mark" aria-hidden="true">D</span>
+        <span>Daily<span class="brand__sub">Tools</span></span>
+      </a>
+      <div class="search" role="search">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input id="site-search" type="search" placeholder="Search tools…" data-i18n-placeholder="search_placeholder" autocomplete="off" aria-label="Search tools" />
+      <button type="button" class="search__submit" data-search-submit aria-label="Search" data-i18n="search_button">Search</button>
+      </div>
+      <a class="btn btn--primary" href="/" style="height:44px;padding:0 16px;font-size:14px;" data-i18n="footer_home">Home</a>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <div class="back-row">
+      <a class="back-link" href="/#tools">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+        <span data-i18n="back_all_tools">All tools</span>
+      </a>
+    </div>
+
+    <section class="tool-head" aria-labelledby="tool-title">
+      <p class="eyebrow" data-i18n="footer_cat_everyday">Everyday</p>
+      <h1 id="tool-title" class="display-md">Lorem Ipsum Generator</h1>
+      <p>Generate placeholder text by paragraphs, sentences, or words. Everything runs locally — nothing is uploaded.</p>
+    </section>
+
+    <section class="tool-grid" aria-label="Lorem ipsum generator">
+      <div class="panel">
+        <span class="panel__label">Options</span>
+        <div class="opt-row">
+          <button class="pill" type="button" data-unit="paragraphs" aria-pressed="true">Paragraphs</button>
+          <button class="pill" type="button" data-unit="sentences">Sentences</button>
+          <button class="pill" type="button" data-unit="words">Words</button>
+        </div>
+        <div style="margin-top:16px;">
+          <label for="count" class="panel__label" style="display:block;margin-bottom:8px;">How many?</label>
+          <input id="count" type="number" min="1" max="50" value="3" class="text-input" style="height:44px;" />
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:16px;font-size:14px;">
+          <input type="checkbox" id="startWithLorem" checked style="width:18px;height:18px;" />
+          Start with "Lorem ipsum dolor sit amet…"
+        </label>
+        <button class="btn btn--primary" id="generate" type="button" style="margin-top:16px;height:44px;">Generate</button>
+      </div>
+      <div class="panel">
+        <span class="panel__label">Result</span>
+        <textarea id="out" class="text-output" readonly spellcheck="false"></textarea>
+        <button class="btn-copy" type="button" data-copy="#out">Copy result</button>
+      </div>
+    </section>
+
+    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What is Lorem Ipsum used for?</summary>
+        <p>Lorem Ipsum is placeholder text used by designers and developers to fill layouts before real content is ready, so the focus stays on structure and design.</p>
+      </details>
+      <details>
+        <summary>Is the text actually Latin?</summary>
+        <p>It's based on a scrambled passage of Latin text from a 1st-century BC work by Cicero, though it isn't meant to be readable or translated.</p>
+      </details>
+      <details>
+        <summary>Can I generate just a few words instead of paragraphs?</summary>
+        <p>Yes. Switch to "Words" and set the count to get exactly the number of words you need.</p>
+      </details>
+      <details>
+        <summary>Does it always start with "Lorem ipsum dolor sit amet"?</summary>
+        <p>By default, yes — that's the traditional opening. You can uncheck the option to get fully randomized placeholder text instead.</p>
+      </details>
+      <details>
+        <summary>Is there a limit to how much I can generate?</summary>
+        <p>You can generate up to 50 paragraphs, sentences, or words at a time — enough for most mockups and layouts.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="/" aria-label="Daily Tools home">
+            <span class="brand__mark" aria-hidden="true">D</span>
+            <span>Daily<span class="brand__sub">Tools</span></span>
+          </a>
+          <p style="margin-top:16px;max-width:280px;" data-i18n="footer_tagline">Free, lightweight tools that load instantly — built for the daily grind.</p>
+        </div>
+        <div>
+          <h3 data-i18n="footer_tools_heading">Tools</h3>
+          <ul>
+            <li><a href="word-counter.html" data-i18n="card_word_counter_title">Word Counter</a></li>
+            <li><a href="json-formatter.html" data-i18n="card_json_title">JSON Formatter</a></li>
+            <li><a href="unit.html" data-i18n="card_unit_title">Unit Converter</a></li>
+            <li><a href="password.html" data-i18n="card_password_title">Password Generator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_categories_heading">Categories</h3>
+          <ul>
+            <li><a href="/#tools" data-i18n="footer_cat_students">Students</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_developers">Developers</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_everyday">Everyday</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_about_heading">About</h3>
+          <ul>
+            <li><a href="/" data-i18n="footer_home">Home</a></li>
+            <li><a href="/#featured" data-i18n="footer_featured">Featured</a></li>
+            <li><a href="/#tools" data-i18n="footer_all_tools">All tools</a></li>
+<li><a href="/about-us.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="/contact-us.html" data-i18n="nav_contact">Contact Us</a></li>
+            <li><a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+            <li><a href="/terms-conditions.html" data-i18n="nav_terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span class="year"></span> <span data-i18n="copyright_text">Daily Tools. Built vanilla — no frameworks.</span></span>
+        <span class="footer-legal"><a href="/about-us.html" data-i18n="nav_about">About</a> · <a href="/contact-us.html" data-i18n="nav_contact">Contact</a> · <a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy</a> · <a href="/terms-conditions.html" data-i18n="nav_terms">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
+  <script src="../js/tools-data.js" defer></script>
+  <script src="../js/header-search.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/tool-utils.js" defer></script>
+  <script src="../js/lorem-ipsum.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Lorem Ipsum used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lorem Ipsum is placeholder text used by designers and developers to fill layouts before real content is ready, so the focus stays on structure and design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the text actually Latin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's based on a scrambled passage of Latin text from a 1st-century BC work by Cicero, though it isn't meant to be readable or translated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I generate just a few words instead of paragraphs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Switch to \"Words\" and set the count to get exactly the number of words you need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it always start with \"Lorem ipsum dolor sit amet\"?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By default, yes — that's the traditional opening. You can uncheck the option to get fully randomized placeholder text instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a limit to how much I can generate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can generate up to 50 paragraphs, sentences, or words at a time — enough for most mockups and layouts."
+      }
+    }
+  ]
+}
+  </script>
+</body>
+</html>

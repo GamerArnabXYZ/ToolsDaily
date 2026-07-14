@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NNWKV19PQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5NNWKV19PQ');
+  </script>
+  <title>Age Calculator — Find Exact Age in Years & Days | Daily Tools</title>
+  <meta name="description" content="Calculate your exact age in years, months, and days, or find the days between two dates instantly. Free, accurate, and runs entirely in your browser." />
+  <meta name="keywords" content="age calculator, date calculator, days between dates, exact age, birthday calculator" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://toolsdailyonline.netlify.app/tools/age-calculator.html" />
+  <link rel="alternate" hreflang="en" href="https://toolsdailyonline.netlify.app/tools/age-calculator.html" />
+  <link rel="alternate" hreflang="hi" href="https://toolsdailyonline.netlify.app/tools/age-calculator.html?lang=hi" />
+  <link rel="alternate" hreflang="bn" href="https://toolsdailyonline.netlify.app/tools/age-calculator.html?lang=bn" />
+  <link rel="alternate" hreflang="x-default" href="https://toolsdailyonline.netlify.app/tools/age-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolsdailyonline.netlify.app/tools/age-calculator.html" />
+  <meta property="og:title" content="Age Calculator — Find Exact Age in Years & Days | Daily Tools" />
+  <meta property="og:description" content="Calculate your exact age in years, months, and days, or find the days between two dates instantly. Free, accurate, and runs entirely in your browser." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Age Calculator — Find Exact Age in Years & Days | Daily Tools" />
+  <meta name="twitter:description" content="Calculate your exact age in years, months, and days, or find the days between two dates instantly. Free, accurate, and runs entirely in your browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Daily Tools home">
+        <span class="brand__mark" aria-hidden="true">D</span>
+        <span>Daily<span class="brand__sub">Tools</span></span>
+      </a>
+      <div class="search" role="search">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input id="site-search" type="search" placeholder="Search tools…" data-i18n-placeholder="search_placeholder" autocomplete="off" aria-label="Search tools" />
+      <button type="button" class="search__submit" data-search-submit aria-label="Search" data-i18n="search_button">Search</button>
+      </div>
+      <a class="btn btn--primary" href="/" style="height:44px;padding:0 16px;font-size:14px;" data-i18n="footer_home">Home</a>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <div class="back-row">
+      <a class="back-link" href="/#tools">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+        <span data-i18n="back_all_tools">All tools</span>
+      </a>
+    </div>
+
+    <section class="tool-head" aria-labelledby="tool-title">
+      <p class="eyebrow" data-i18n="footer_cat_everyday">Everyday</p>
+      <h1 id="tool-title" class="display-md">Age Calculator</h1>
+      <p>Find your exact age, or the gap between any two dates. Everything runs locally — nothing is uploaded.</p>
+    </section>
+
+    <section class="tool-grid tool-grid--split" aria-label="Age calculator">
+      <div class="panel">
+        <span class="panel__label">Birth date</span>
+        <input id="birth" type="date" class="text-input" style="height:44px;" />
+        <label style="display:block;margin-top:16px;" class="panel__label">Calculate age as of</label>
+        <input id="asof" type="date" class="text-input" style="height:44px;" />
+        <button class="btn btn--primary" id="calc" type="button" style="margin-top:16px;height:44px;">Calculate age</button>
+      </div>
+      <div class="panel">
+        <span class="panel__label">Result</span>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat__num" id="years">—</div><div class="stat__lbl">Years</div></div>
+          <div class="stat"><div class="stat__num" id="months">—</div><div class="stat__lbl">Months</div></div>
+          <div class="stat"><div class="stat__num" id="days">—</div><div class="stat__lbl">Days</div></div>
+          <div class="stat" style="grid-column:1/-1"><div class="stat__num" id="totaldays" style="font-size:20px;">—</div><div class="stat__lbl">Total days lived</div></div>
+          <div class="stat" style="grid-column:1/-1"><div class="stat__num" id="nextbday" style="font-size:16px;">—</div><div class="stat__lbl">Days until next birthday</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>How is age calculated exactly?</summary>
+        <p>The tool counts complete years, then complete months, then remaining days between your birth date and the reference date — the same way age is counted on official documents.</p>
+      </details>
+      <details>
+        <summary>Can I calculate the gap between two dates that aren't a birthday?</summary>
+        <p>Yes. Set "Calculate age as of" to any date instead of today, and set "Birth date" to your start date — the result shows the exact gap between them.</p>
+      </details>
+      <details>
+        <summary>Does it account for leap years?</summary>
+        <p>Yes. The calculation uses actual calendar dates, so leap years are handled automatically and don't cause any drift.</p>
+      </details>
+      <details>
+        <summary>Why does it show days until my next birthday?</summary>
+        <p>It's a small bonus — a quick countdown to your next birthday based on the reference date you selected.</p>
+      </details>
+      <details>
+        <summary>Is my birth date stored or sent anywhere?</summary>
+        <p>No. The calculation happens entirely in your browser and nothing is saved or transmitted.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="/" aria-label="Daily Tools home">
+            <span class="brand__mark" aria-hidden="true">D</span>
+            <span>Daily<span class="brand__sub">Tools</span></span>
+          </a>
+          <p style="margin-top:16px;max-width:280px;" data-i18n="footer_tagline">Free, lightweight tools that load instantly — built for the daily grind.</p>
+        </div>
+        <div>
+          <h3 data-i18n="footer_tools_heading">Tools</h3>
+          <ul>
+            <li><a href="word-counter.html" data-i18n="card_word_counter_title">Word Counter</a></li>
+            <li><a href="json-formatter.html" data-i18n="card_json_title">JSON Formatter</a></li>
+            <li><a href="unit.html" data-i18n="card_unit_title">Unit Converter</a></li>
+            <li><a href="password.html" data-i18n="card_password_title">Password Generator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_categories_heading">Categories</h3>
+          <ul>
+            <li><a href="/#tools" data-i18n="footer_cat_students">Students</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_developers">Developers</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_everyday">Everyday</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_about_heading">About</h3>
+          <ul>
+            <li><a href="/" data-i18n="footer_home">Home</a></li>
+            <li><a href="/#featured" data-i18n="footer_featured">Featured</a></li>
+            <li><a href="/#tools" data-i18n="footer_all_tools">All tools</a></li>
+<li><a href="/about-us.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="/contact-us.html" data-i18n="nav_contact">Contact Us</a></li>
+            <li><a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+            <li><a href="/terms-conditions.html" data-i18n="nav_terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span class="year"></span> <span data-i18n="copyright_text">Daily Tools. Built vanilla — no frameworks.</span></span>
+        <span class="footer-legal"><a href="/about-us.html" data-i18n="nav_about">About</a> · <a href="/contact-us.html" data-i18n="nav_contact">Contact</a> · <a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy</a> · <a href="/terms-conditions.html" data-i18n="nav_terms">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
+  <script src="../js/tools-data.js" defer></script>
+  <script src="../js/header-search.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/tool-utils.js" defer></script>
+  <script src="../js/age-calculator.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is age calculated exactly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool counts complete years, then complete months, then remaining days between your birth date and the reference date — the same way age is counted on official documents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate the gap between two dates that aren't a birthday?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Set \"Calculate age as of\" to any date instead of today, and set \"Birth date\" to your start date — the result shows the exact gap between them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it account for leap years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The calculation uses actual calendar dates, so leap years are handled automatically and don't cause any drift."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does it show days until my next birthday?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a small bonus — a quick countdown to your next birthday based on the reference date you selected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my birth date stored or sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calculation happens entirely in your browser and nothing is saved or transmitted."
+      }
+    }
+  ]
+}
+  </script>
+</body>
+</html>

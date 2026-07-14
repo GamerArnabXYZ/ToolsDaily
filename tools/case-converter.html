@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NNWKV19PQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5NNWKV19PQ');
+  </script>
+  <title>Case Converter — UPPER, lower, Title & camelCase | Daily Tools</title>
+  <meta name="description" content="Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case and kebab-case instantly. Free, private, no signup needed." />
+  <meta name="keywords" content="case converter, uppercase, lowercase, title case, camelcase, snake case, kebab case, text case tool" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://toolsdailyonline.netlify.app/tools/case-converter.html" />
+  <link rel="alternate" hreflang="en" href="https://toolsdailyonline.netlify.app/tools/case-converter.html" />
+  <link rel="alternate" hreflang="hi" href="https://toolsdailyonline.netlify.app/tools/case-converter.html?lang=hi" />
+  <link rel="alternate" hreflang="bn" href="https://toolsdailyonline.netlify.app/tools/case-converter.html?lang=bn" />
+  <link rel="alternate" hreflang="x-default" href="https://toolsdailyonline.netlify.app/tools/case-converter.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolsdailyonline.netlify.app/tools/case-converter.html" />
+  <meta property="og:title" content="Case Converter — UPPER, lower, Title & camelCase | Daily Tools" />
+  <meta property="og:description" content="Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case and kebab-case instantly. Free, private, no signup needed." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Case Converter — UPPER, lower, Title & camelCase | Daily Tools" />
+  <meta name="twitter:description" content="Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case and kebab-case instantly. Free, private, no signup needed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Daily Tools home">
+        <span class="brand__mark" aria-hidden="true">D</span>
+        <span>Daily<span class="brand__sub">Tools</span></span>
+      </a>
+      <div class="search" role="search">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input id="site-search" type="search" placeholder="Search tools…" data-i18n-placeholder="search_placeholder" autocomplete="off" aria-label="Search tools" />
+      <button type="button" class="search__submit" data-search-submit aria-label="Search" data-i18n="search_button">Search</button>
+      </div>
+      <a class="btn btn--primary" href="/" style="height:44px;padding:0 16px;font-size:14px;" data-i18n="footer_home">Home</a>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <div class="back-row">
+      <a class="back-link" href="/#tools">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+        <span data-i18n="back_all_tools">All tools</span>
+      </a>
+    </div>
+
+    <section class="tool-head" aria-labelledby="tool-title">
+      <p class="eyebrow" data-i18n="footer_cat_developers">Developers</p>
+      <h1 id="tool-title" class="display-md">Case Converter</h1>
+      <p>Convert text between UPPERCASE, lowercase, Title Case, and more. Everything runs locally — nothing is uploaded.</p>
+    </section>
+
+    <section class="tool-grid" aria-label="Case converter">
+      <div class="panel">
+        <span class="panel__label">Your text</span>
+        <textarea id="in" class="text-input" placeholder="Type or paste your text here…" spellcheck="false"></textarea>
+        <div class="opt-row" style="margin-top:12px;">
+          <button class="pill" type="button" data-case="upper">UPPERCASE</button>
+          <button class="pill" type="button" data-case="lower">lowercase</button>
+          <button class="pill" type="button" data-case="title">Title Case</button>
+          <button class="pill" type="button" data-case="sentence">Sentence case</button>
+          <button class="pill" type="button" data-case="camel">camelCase</button>
+          <button class="pill" type="button" data-case="snake">snake_case</button>
+          <button class="pill" type="button" data-case="kebab">kebab-case</button>
+        </div>
+      </div>
+      <div class="panel">
+        <span class="panel__label">Result</span>
+        <textarea id="out" class="text-output" readonly spellcheck="false"></textarea>
+        <button class="btn-copy" type="button" data-copy="#out">Copy result</button>
+      </div>
+    </section>
+
+    <div class="ad-slot" data-ad-slot aria-label="Advertisement"></div>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 class="section-head" id="faq-heading">Frequently asked questions</h2>
+      <details open>
+        <summary>What case styles are supported?</summary>
+        <p>UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and kebab-case are all supported in one tap.</p>
+      </details>
+      <details>
+        <summary>What's the difference between camelCase and snake_case?</summary>
+        <p>camelCase joins words with no spaces and capitalizes each word after the first (myVariableName). snake_case joins words with underscores in lowercase (my_variable_name).</p>
+      </details>
+      <details>
+        <summary>Is my text uploaded anywhere?</summary>
+        <p>No. Conversion happens locally in your browser and your text never leaves your device.</p>
+      </details>
+      <details>
+        <summary>Does it work with multiple sentences or paragraphs?</summary>
+        <p>Yes. Sentence case and Title Case handle multiple sentences and line breaks correctly.</p>
+      </details>
+      <details>
+        <summary>Can I use this for code variable names?</summary>
+        <p>Yes. camelCase and snake_case are commonly used for variable and function naming across programming languages.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="/" aria-label="Daily Tools home">
+            <span class="brand__mark" aria-hidden="true">D</span>
+            <span>Daily<span class="brand__sub">Tools</span></span>
+          </a>
+          <p style="margin-top:16px;max-width:280px;" data-i18n="footer_tagline">Free, lightweight tools that load instantly — built for the daily grind.</p>
+        </div>
+        <div>
+          <h3 data-i18n="footer_tools_heading">Tools</h3>
+          <ul>
+            <li><a href="word-counter.html" data-i18n="card_word_counter_title">Word Counter</a></li>
+            <li><a href="json-formatter.html" data-i18n="card_json_title">JSON Formatter</a></li>
+            <li><a href="unit.html" data-i18n="card_unit_title">Unit Converter</a></li>
+            <li><a href="password.html" data-i18n="card_password_title">Password Generator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_categories_heading">Categories</h3>
+          <ul>
+            <li><a href="/#tools" data-i18n="footer_cat_students">Students</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_developers">Developers</a></li>
+            <li><a href="/#tools" data-i18n="footer_cat_everyday">Everyday</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer_about_heading">About</h3>
+          <ul>
+            <li><a href="/" data-i18n="footer_home">Home</a></li>
+            <li><a href="/#featured" data-i18n="footer_featured">Featured</a></li>
+            <li><a href="/#tools" data-i18n="footer_all_tools">All tools</a></li>
+<li><a href="/about-us.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="/contact-us.html" data-i18n="nav_contact">Contact Us</a></li>
+            <li><a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+            <li><a href="/terms-conditions.html" data-i18n="nav_terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span class="year"></span> <span data-i18n="copyright_text">Daily Tools. Built vanilla — no frameworks.</span></span>
+        <span class="footer-legal"><a href="/about-us.html" data-i18n="nav_about">About</a> · <a href="/contact-us.html" data-i18n="nav_contact">Contact</a> · <a href="/privacy-policy.html" data-i18n="nav_privacy">Privacy</a> · <a href="/terms-conditions.html" data-i18n="nav_terms">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>document.querySelectorAll(".year").forEach(e=>e.textContent=new Date().getFullYear());</script>
+  <script src="../js/tools-data.js" defer></script>
+  <script src="../js/header-search.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/tool-utils.js" defer></script>
+  <script src="../js/case-converter.js" defer></script>
+  <script type="application/ld+json" id="faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What case styles are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and kebab-case are all supported in one tap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between camelCase and snake_case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "camelCase joins words with no spaces and capitalizes each word after the first (myVariableName). snake_case joins words with underscores in lowercase (my_variable_name)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Conversion happens locally in your browser and your text never leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with multiple sentences or paragraphs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Sentence case and Title Case handle multiple sentences and line breaks correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for code variable names?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. camelCase and snake_case are commonly used for variable and function naming across programming languages."
+      }
+    }
+  ]
+}
+  </script>
+</body>
+</html>

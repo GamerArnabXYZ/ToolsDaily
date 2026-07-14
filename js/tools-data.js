@@ -15,6 +15,10 @@ const TOOLS = [
   { name: "Image to Base64", desc: "Read an image and copy its data URL.", category: "everyday", href: "tools/image.html", icon: "▦" },
   { name: "Password Generator", desc: "Strong, copy-ready random passwords.", category: "everyday", href: "tools/password.html", icon: "🔑" },
   { name: "Color Picker", desc: "Pick, copy and convert HEX/RGB/HSL.", category: "everyday", href: "tools/color.html", icon: "◑" },
+  { name: "Case Converter", desc: "UPPERCASE, lowercase, Title Case, camelCase and more.", category: "developers", href: "tools/case-converter.html", icon: "Aa" },
+  { name: "Lorem Ipsum Generator", desc: "Generate placeholder paragraphs, sentences or words.", category: "everyday", href: "tools/lorem-ipsum.html", icon: "¶" },
+  { name: "Age Calculator", desc: "Find your exact age in years, months and days.", category: "everyday", href: "tools/age-calculator.html", icon: "🎂" },
+  { name: "Quiz Maker", desc: "Build a multiple-choice quiz and share it with a link.", category: "students", href: "tools/quiz-maker.html", icon: "?" },
 ];
 
 const CATEGORIES = [
